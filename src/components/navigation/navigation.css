@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 3px solid #2c4152;
+  z-index: 101;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+  top: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: 100px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  padding: 0 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.links > a {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  padding: 0 1rem;
+}
