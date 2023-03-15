@@ -42,9 +42,15 @@ const LargeNavigation = () => {
       ))}
       <Link
         to="join"
-        className="font-semibold bg-black text-[white] px-5 py-[0.4rem] rounded-[4px]"
+        className="font-semibold bg-black text-white px-5 py-[0.4rem] rounded-[4px] hover:bg-white hover:text-black hover:ring hover:ring-black"
       >
-        Join
+        Sign In
+      </Link>
+      <Link
+        to="join"
+        className="font-semibold bg-black text-white px-5 py-[0.4rem] rounded-[4px] hover:bg-white hover:text-black hover:ring hover:ring-black"
+      >
+        Sign Up
       </Link>
     </div>
   );

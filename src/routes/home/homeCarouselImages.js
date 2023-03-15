@@ -1,4 +1,7 @@
-import Image from "../../assests/15032023-UHP-D-Main-P4-SuperBrandDays-SuperdryMnS-Min50Extra35.avif";
-import Image2 from "../../assests/15032023-UHP-D-Main-P5-Arrow-Min50.avif";
+import Image from "../../assests/1.avif";
+import Image2 from "../../assests/2.avif";
+import Image3 from "../../assests/3.avif";
+import Image4 from "../../assests/4.avif";
+import Image5 from "../../assests/5.avif";
 
-export const carouselImage = [Image, Image2];
+export const carouselImage = [Image, Image2, Image3, Image4, Image5];

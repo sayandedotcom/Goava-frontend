@@ -1,38 +1,54 @@
 import React from "react";
 import "./footer.css";
 
+const socials = [
+  { name: "Facebook", link: "https://sayande.tech/", icons: "" },
+  { name: "Instagram", link: "https://sayande.tech/", icons: "" },
+  { name: "YouTube", link: "https://sayande.tech/", icons: "" },
+  { name: "Linkedin", link: "https://sayande.tech/", icons: "" },
+  { name: "Twitter", link: "https://sayande.tech/", icons: "" },
+];
+const contact = [
+  { name: "Telegram", link: "https://sayande.tech/", icons: "" },
+  { name: "Mail", link: "https://sayande.tech/", icons: "" },
+  { name: "Discord", link: "https://sayande.tech/", icons: "" },
+  { name: "Address", link: "https://sayande.tech/", icons: "" },
+  { name: "Phone No", link: "https://sayande.tech/", icons: "" },
+];
 const Footer = () => {
   return (
     <>
       <div className="footer">
         <section className="footer_sections">
           <p>Goava</p>
-          <div className="footer_items">
-            <p>Facebook</p>
-            <p>Facebook</p>
-            <p>Facebook</p>
-            <p>Facebook</p>
-            <p>Facebook</p>
-          </div>
+          <hr />
+          <div className="footer_items"></div>
         </section>
         <section className="footer_sections">
           <p>Help</p>
+          <hr />
+          <div className="footer_items"></div>
+        </section>
+        <section className="footer_sections">
+          <p>Socials</p>
+          <hr />
           <div className="footer_items">
-            <a href="https://sayande.tech/">Facebook</a>
-            <a href="https://sayande.tech/">Facebook</a>
-            <a href="https://sayande.tech/">Facebook</a>
-            <a href="https://sayande.tech/">Facebook</a>
-            <a href="https://sayande.tech/">Facebook</a>
+            {socials.map(({ name, link }) => (
+              <a href={link} target="blank">
+                {name}
+              </a>
+            ))}
           </div>
         </section>
         <section className="footer_sections">
-          <p>Follow us</p>
+          <p>Contact Us</p>
+          <hr />
           <div className="footer_items">
-            <a href="https://sayande.tech/">Facebook</a>
-            <a href="https://sayande.tech/">Instagram</a>
-            <a href="https://sayande.tech/">Telegram</a>
-            <a href="https://sayande.tech/">YouTube</a>
-            <a href="https://sayande.tech/">Twitter</a>
+            {contact.map(({ name, link }) => (
+              <a href={link} target="blank">
+                {name}
+              </a>
+            ))}
           </div>
         </section>
       </div>

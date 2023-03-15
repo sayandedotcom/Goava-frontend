@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from "better-react-carousel";
 import { carouselImage } from "./homeCarouselImages";
-import Spinner from "../../components/spinner/spinner";
 const Home = () => {
   return (
     <>
