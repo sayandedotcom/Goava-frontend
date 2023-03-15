@@ -1,35 +1,25 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import LargeNavigation from "./largeNavigation/largeNavigation";
+import MobileNavigation from "./mobileNavigation/mobileNavigation";
+import Footer from "../footer/footer";
 import "./navigation.css";
 
-const navigations = [
-  { component: "home", route: "/" },
-  { component: "courses", route: "courses" },
-  { component: "about", route: "about" },
-  { component: "chats", route: "chats" },
-  { component: <ShoppingBagOutlinedIcon />, route: "cart" },
-  { component: <FavoriteBorderOutlinedIcon />, route: "favourites" },
-  { component: <NotificationsOutlinedIcon />, route: "notifications" },
-  { component: <AccountCircleOutlinedIcon />, route: "profile" },
-];
 const Navigation = () => {
   return (
     <>
-      <header className="nav">
-        <Link className="logo" to="/">
+      <header className="nav flex flex-row justify-between w-full z-[101] bg-white fixed top-0 shadow-[0_3px_6px_0_rgb(0_0_0_/_20%)] uppercase no-underline h-[100px] border-t-[3px] border-t-[#2c4152] border-b-[#e0e0e0] border-solid border-b ">
+        <Link
+          className="logo flex items-center justify-center no-underline text-[black] text-[2rem] font-bold px-8 py-0"
+          to="/"
+        >
           Goava
         </Link>
-        <div className="links">
-          {navigations.map(({ component, route }, i) => (
-            <Link to={route}>{component}</Link>
-          ))}
-        </div>
+        <LargeNavigation />
+        <MobileNavigation />
       </header>
       <Outlet />
+      <Footer />
     </>
   );
 };

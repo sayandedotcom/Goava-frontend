@@ -1,5 +1,5 @@
 .nav {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
@@ -12,29 +12,56 @@
   top: 0;
   text-transform: uppercase;
   text-decoration: none;
-  height: 100px;
+  height: 100px; */
 }
 .logo {
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: black;
   padding: 0 2rem;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 700; */
 }
 .links {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  font-size: 0.9rem;
-  font-weight: 600;
+  /* display: flex;
+  align-items: center; */
+  /* justify-content: space-around; */
+  /* margin-right: 3rem; */
+  /* gap: 25px; */
+  /* margin-left: auto; */
 }
-.links > a {
-  font-size: 1rem;
-  font-weight: 700;
+.links .links__name {
+  /* font-weight: 600;
   text-decoration: none;
   color: black;
-  padding: 0 1rem;
+  padding: 0 1rem; */
 }
+.links .links__icons {
+  /* border-radius: 50%;
+  display: flex;
+  padding: 0.5rem;
+  background-color: black; */
+}
+.links__icons > svg {
+  /* fill: #fff; */
+}
+.mobile__link {
+  /* display: flex;
+  align-items: center;
+  margin-left: auto; */
+}
+.mobile__link > svg {
+  font-size: 40px;
+}
+/* @media screen and (max-width: 1000px) {
+  .links {
+    display: none;
+  }
+} */
+/* @media screen and (min-width: 1000px) {
+  .mobile__link {
+    display: none;
+  }
+} */
