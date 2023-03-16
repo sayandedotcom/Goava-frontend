@@ -19,16 +19,12 @@ const Signin = () => {
         <hr className="border-1 border-black" />
         <form className="flex flex-col gap-6">
           <FormInput
-            // value={email}
-            // onChange={(e) => setEmail(e.target.value)}
             placeholder="Email address"
             type="email"
             name="email"
             required
           />
           <FormInput
-            // value={password}
-            // onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             type="password"
             name="password"

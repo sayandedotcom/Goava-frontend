@@ -18,32 +18,24 @@ const Signup = () => {
         <hr className="border-1 border-black" />
         <form className="flex flex-col gap-6">
           <FormInput
-            // value={firstName}
-            // onChange={(e) => setFirstName(e.target.value)}
             placeholder="First name"
             type="text"
             name="firstName"
             required
           />
           <FormInput
-            // value={lastName}
-            // onChange={(e) => setLastName(e.target.value)}
             placeholder="Last name"
             type="text"
             name="lastName"
             required
           />
           <FormInput
-            // value={email}
-            // onChange={(e) => setEmail(e.target.value)}
             placeholder="Email address"
             type="email"
             name="email"
             required
           />
           <FormInput
-            // value={password}
-            // onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             type="password"
             name="password"
