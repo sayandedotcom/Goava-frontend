@@ -4,56 +4,50 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import "../navigation.css";
+import Button from "../../button/button";
 
-const navigations = [
+const navbar = [
   { component: "home", route: "/" },
-  { component: "about us", route: "about" },
-  { component: "courses", route: "courses" },
+  { component: "about us", route: "/about" },
+  { component: "courses", route: "/courses" },
 ];
-const navigationsIcons = [
+const navbarIcons = [
   {
     component: <ShoppingBagOutlinedIcon style={{ fill: "white" }} />,
-    route: "cart",
+    route: "/cart",
   },
   {
     component: <FavoriteBorderOutlinedIcon style={{ fill: "white" }} />,
-    route: "favourites",
+    route: "/favourites",
   },
   {
     component: <NotificationsOutlinedIcon style={{ fill: "white" }} />,
-    route: "notifications",
+    route: "/notifications",
   },
   // { component: <AccountCircleOutlinedIcon />, route: "profile" },
 ];
 
-const LargeNavigation = () => {
+const LargeNavbar = () => {
   return (
     <div className="flex items-center justify-between gap-6 mr-3 max-w-5xl:hidden ">
-      {navigations.map(({ component, route }, i) => (
+      {navbar.map(({ component, route }, i) => (
         <Link className="font-semibold no-underline text-black" to={route}>
           {component}
         </Link>
       ))}
-      {navigationsIcons.map(({ component, route }, i) => (
+      {navbarIcons.map(({ component, route }, i) => (
         <Link className="flex bg-[black] p-2 rounded-[50%]" to={route}>
           {component}
         </Link>
       ))}
-      <Link
-        to="signin"
-        className="font-semibold bg-black text-white px-5 py-[0.4rem] rounded-[4px] hover:bg-white hover:text-black hover:ring hover:ring-black"
-      >
-        Sign In
+      <Link to="/signin">
+        <Button>Sign In</Button>
       </Link>
-      <Link
-        to="signup"
-        className="font-semibold bg-black text-white px-5 py-[0.4rem] rounded-[4px] hover:bg-white hover:text-black hover:ring hover:ring-black"
-      >
-        Sign Up
+      <Link to="/signup">
+        <Button>Sign Up</Button>
       </Link>
     </div>
   );
 };
 
-export default LargeNavigation;
+export default LargeNavbar;

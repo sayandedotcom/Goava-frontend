@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fullProgress } from "../../redux/loaderSlice";
 import Carousel from "better-react-carousel";
 import { carouselImage } from "./homeCarouselImages";
+
 const Home = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fullProgress());
+  }, []);
+
   return (
     <>
       <Carousel

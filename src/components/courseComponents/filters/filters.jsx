@@ -15,7 +15,7 @@ const filters = [
 ];
 const Filters = () => {
   return (
-    <div className="flex flex-col p-3 max-w-xs">
+    <div className="flex flex-col p-3 w-3/12">
       <div className="flex justify-center items-center font-black p-1 text-xl">
         <TuneIcon /> <span className="mx-3">Filters</span>
       </div>
