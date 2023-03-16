@@ -14,13 +14,13 @@ const Error = () => {
       </span>
       <div className="flex flex-row gap-2 ">
         <Link to={"/"}>
-          <Button>
+          <Button buttonType="inverted">
             <HomeRoundedIcon />
             Back to Home
           </Button>
         </Link>
         <Link onClick={() => navigate(-1)}>
-          <Button>
+          <Button buttonType="inverted">
             <ChevronLeftRoundedIcon />
             Go Back
           </Button>

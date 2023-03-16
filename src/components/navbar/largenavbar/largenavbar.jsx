@@ -41,10 +41,10 @@ const LargeNavbar = () => {
         </Link>
       ))}
       <Link to="/signin">
-        <Button>Sign In</Button>
+        <Button buttonType="inverted">Sign In</Button>
       </Link>
       <Link to="/signup">
-        <Button>Sign Up</Button>
+        <Button buttonType="inverted">Sign Up</Button>
       </Link>
     </div>
   );
