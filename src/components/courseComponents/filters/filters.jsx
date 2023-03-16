@@ -22,7 +22,7 @@ const Filters = () => {
       <div className="flex flex-wrap my-3">
         {filters.map((filter) => (
           <span className="bg-[#e6e6e6] px-2 py-1 rounded-[4px] m-2 cursor-pointer">
-            {filter} {`(${Math.floor(Math.random() * 4)})`}
+            {filter} {`(${Math.floor(Math.random() * 10)})`}
           </span>
         ))}
       </div>
