@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import LargeNavbar from "./largenavbar/largenavbar.jsx";
 import { useDispatch } from "react-redux";
 import { fullProgress } from "../../redux/loaderSlice.js";
+import NewTooltip from "../tooltip/tooltip.jsx";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Navbar = () => {
         to="/"
         onClick={() => dispatch(fullProgress())}
       >
-        Goava
+        <NewTooltip title="Go Home">Goava</NewTooltip>
       </Link>
       <LargeNavbar />
     </header>

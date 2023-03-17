@@ -5,6 +5,7 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import Button from "../../button/button";
+import NewTooltip from "../../tooltip/tooltip";
 
 const navbar = [
   { id: 1, component: "home", route: "/" },
@@ -14,16 +15,19 @@ const navbar = [
 const navbarIcons = [
   {
     id: 1,
+    tooltip: "My Cart",
     component: <ShoppingBagOutlinedIcon style={{ fill: "white" }} />,
     route: "/cart",
   },
   {
     id: 2,
+    tooltip: "My Favourites",
     component: <FavoriteBorderOutlinedIcon style={{ fill: "white" }} />,
     route: "/favourites",
   },
   {
     id: 3,
+    tooltip: "Notifications",
     component: <NotificationsOutlinedIcon style={{ fill: "white" }} />,
     route: "/notifications",
   },
@@ -42,16 +46,26 @@ const LargeNavbar = () => {
           {component}
         </Link>
       ))}
-      {navbarIcons.map(({ id, component, route }, i) => (
-        <Link key={id} className="flex bg-[black] p-2 rounded-[50%]" to={route}>
-          {component}
-        </Link>
+      {navbarIcons.map(({ id, tooltip, component, route }, i) => (
+        <NewTooltip title={tooltip}>
+          <Link
+            key={id}
+            className="flex bg-[black] p-2 rounded-[50%]"
+            to={route}
+          >
+            {component}
+          </Link>
+        </NewTooltip>
       ))}
       <Link to="/signin">
-        <Button buttonType="inverted">Sign In</Button>
+        <NewTooltip title="Sign In">
+          <Button buttonType="inverted">Sign In</Button>
+        </NewTooltip>
       </Link>
       <Link to="/signup">
-        <Button buttonType="inverted">Sign Up</Button>
+        <NewTooltip title="Sign In">
+          <Button buttonType="inverted">Sign Up</Button>
+        </NewTooltip>
       </Link>
     </div>
   );

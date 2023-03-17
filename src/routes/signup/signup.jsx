@@ -4,6 +4,7 @@ import Button from "../../components/button/button";
 import Google from "../../assests/svg-google.svg";
 import Facebook from "../../assests/svg-facebook.svg";
 import FormInput from "../../components/input/input";
+import NewTooltip from "../../components/tooltip/tooltip";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -91,14 +92,18 @@ const Signup = () => {
       </div>
       <h1 className="text-2xl font-bold">OR</h1>
       <div className="flex items-center justify-center gap-4">
-        <Button buttonType="google">
-          <img src={Google} alt="" />
-          Google
-        </Button>
-        <Button buttonType="google">
-          <img src={Facebook} alt="" />
-          Facebook
-        </Button>
+        <NewTooltip title="Sign Up with Google">
+          <Button buttonType="google">
+            <img src={Google} alt="" />
+            Google
+          </Button>
+        </NewTooltip>
+        <NewTooltip title="Sign Up with Facebook">
+          <Button buttonType="google">
+            <img src={Facebook} alt="" />
+            Facebook
+          </Button>
+        </NewTooltip>
       </div>
     </div>
   );
