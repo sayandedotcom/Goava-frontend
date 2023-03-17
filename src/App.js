@@ -8,6 +8,7 @@ const CoursePage = lazy(() => import("./routes/course/course"));
 const AboutPage = lazy(() => import("./routes/about/about"));
 const Signin = lazy(() => import("./routes/signin/signin"));
 const Signup = lazy(() => import("./routes/signup/signup"));
+const Admin = lazy(() => import("./routes/admin/admin"));
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             </Suspense>
           </Layout>
         }
-      ></Route>
+      />
       <Route
         path="/courses"
         element={
@@ -31,7 +32,7 @@ function App() {
             </Suspense>
           </Layout>
         }
-      ></Route>
+      />
       <Route
         path="/about"
         element={
@@ -41,7 +42,7 @@ function App() {
             </Suspense>
           </Layout>
         }
-      ></Route>
+      />
       <Route
         path="/signin"
         element={
@@ -51,7 +52,7 @@ function App() {
             </Suspense>
           </Layout>
         }
-      ></Route>
+      />
       <Route
         path="/signup"
         element={
@@ -61,7 +62,17 @@ function App() {
             </Suspense>
           </Layout>
         }
-      ></Route>
+      />
+      <Route
+        path="/admin"
+        element={
+          <Layout>
+            <Suspense fallback={<Spinner />}>
+              <Admin />
+            </Suspense>
+          </Layout>
+        }
+      />
       <Route
         path="*"
         element={
@@ -71,7 +82,7 @@ function App() {
             </Suspense>
           </Layout>
         }
-      ></Route>
+      />
     </Routes>
   );
 }
