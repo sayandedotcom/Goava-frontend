@@ -4,25 +4,25 @@ import Footeritems from "./footerItems/footerItems";
 import "./footer.css";
 
 const example = [
-  { name: "Example1", link: "https://sayande.tech/", icons: "" },
-  { name: "Example2", link: "https://sayande.tech/", icons: "" },
-  { name: "Example3", link: "https://sayande.tech/", icons: "" },
-  { name: "Example4", link: "https://sayande.tech/", icons: "" },
-  { name: "Example5", link: "https://sayande.tech/", icons: "" },
+  { id: 1, name: "Example1", link: "https://sayande.tech/", icons: "" },
+  { id: 2, name: "Example2", link: "https://sayande.tech/", icons: "" },
+  { id: 3, name: "Example3", link: "https://sayande.tech/", icons: "" },
+  { id: 4, name: "Example4", link: "https://sayande.tech/", icons: "" },
+  { id: 5, name: "Example5", link: "https://sayande.tech/", icons: "" },
 ];
 const socials = [
-  { name: "Facebook", link: "https://sayande.tech/", icons: "" },
-  { name: "Instagram", link: "https://sayande.tech/", icons: "" },
-  { name: "YouTube", link: "https://sayande.tech/", icons: "" },
-  { name: "Linkedin", link: "https://sayande.tech/", icons: "" },
-  { name: "Twitter", link: "https://sayande.tech/", icons: "" },
+  { id: 1, name: "Facebook", link: "https://sayande.tech/", icons: "" },
+  { id: 2, name: "Instagram", link: "https://sayande.tech/", icons: "" },
+  { id: 3, name: "YouTube", link: "https://sayande.tech/", icons: "" },
+  { id: 4, name: "Linkedin", link: "https://sayande.tech/", icons: "" },
+  { id: 5, name: "Twitter", link: "https://sayande.tech/", icons: "" },
 ];
 const contact = [
-  { name: "Telegram", link: "https://sayande.tech/", icons: "" },
-  { name: "Mail", link: "https://sayande.tech/", icons: "" },
-  { name: "Discord", link: "https://sayande.tech/", icons: "" },
-  { name: "Address", link: "https://sayande.tech/", icons: "" },
-  { name: "Phone No", link: "https://sayande.tech/", icons: "" },
+  { id: 1, name: "Telegram", link: "https://sayande.tech/", icons: "" },
+  { id: 2, name: "Mail", link: "https://sayande.tech/", icons: "" },
+  { id: 3, name: "Discord", link: "https://sayande.tech/", icons: "" },
+  { id: 4, name: "Address", link: "https://sayande.tech/", icons: "" },
+  { id: 5, name: "Phone No", link: "https://sayande.tech/", icons: "" },
 ];
 const Footer = () => {
   return (
@@ -32,8 +32,8 @@ const Footer = () => {
           <p className="text-xl font-black mb-1">Goava</p>
           <hr />
           <Footeritems>
-            {example.map(({ name, link }) => (
-              <a href={link} target="blank">
+            {example.map(({ id, name, link }) => (
+              <a key={id} href={link} target="blank">
                 {name}
               </a>
             ))}
@@ -44,8 +44,8 @@ const Footer = () => {
           <p className="text-xl font-black mb-1">Help</p>
           <hr />
           <Footeritems>
-            {example.map(({ name, link }) => (
-              <a href={link} target="blank">
+            {example.map(({ id, name, link }) => (
+              <a key={id} href={link} target="blank">
                 {name}
               </a>
             ))}
@@ -56,8 +56,8 @@ const Footer = () => {
           <p className="text-xl font-black mb-1">Socials</p>
           <hr />
           <Footeritems>
-            {socials.map(({ name, link }) => (
-              <a href={link} target="blank">
+            {socials.map(({ id, name, link }) => (
+              <a key={id} href={link} target="blank">
                 {name}
               </a>
             ))}
@@ -68,8 +68,8 @@ const Footer = () => {
           <p className="text-xl font-black mb-1">Contact Us</p>
           <hr />
           <Footeritems>
-            {contact.map(({ name, link }) => (
-              <a href={link} target="blank">
+            {contact.map(({ id, name, link }) => (
+              <a key={id} href={link} target="blank">
                 {name}
               </a>
             ))}

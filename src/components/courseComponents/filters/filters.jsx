@@ -16,8 +16,14 @@ const filters = [
 ];
 
 const Filters = () => {
-  const [active, setActive] = useState("All");
+  // const [active, setActive] = useState("All");
   const [activeArray, setActiveArray] = useState(["All"]);
+
+  const removeFilter = (filter) => {
+    // const result = activeArray.filter((word) => word === filter);
+    // setActiveArray([result]);
+  };
+
   return (
     <div className="flex flex-col p-3 w-3/12">
       <div className="flex justify-center items-center font-black p-1 text-xl">
@@ -27,10 +33,16 @@ const Filters = () => {
         {filters.map((filter) => (
           <span
             onClick={() => setActiveArray([...activeArray, filter])}
-            className="flex items-center bg-[#e4e4e4] px-2 py-1 rounded-[4px] m-2 cursor-pointer border border-black font-semibold	"
+            className="flex items-center bg-[#e4e4e4] px-2 py-1 rounded-[4px] m-2 cursor-pointer border border-black font-semibold 
+            shadow-[0_4px_8px_0_rgba(0,0,0,0.2),0_6px_20px_0_rgba(0,0,0,0.19)]"
           >
             {filter} {`(${Math.floor(Math.random() * 10)})`}
-            {activeArray.includes(filter) && <CloseRoundedIcon />}
+            {activeArray.includes(filter) && (
+              <CloseRoundedIcon
+                onClick={removeFilter(filter)}
+                className="hover:bg-[#ff4949] rounded-[50%] ml-1 hover:text-white"
+              />
+            )}
           </span>
         ))}
       </div>

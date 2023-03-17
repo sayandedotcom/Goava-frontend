@@ -7,20 +7,23 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import Button from "../../button/button";
 
 const navbar = [
-  { component: "home", route: "/" },
-  { component: "about us", route: "/about" },
-  { component: "courses", route: "/courses" },
+  { id: 1, component: "home", route: "/" },
+  { id: 2, component: "about us", route: "/about" },
+  { id: 3, component: "courses", route: "/courses" },
 ];
 const navbarIcons = [
   {
+    id: 1,
     component: <ShoppingBagOutlinedIcon style={{ fill: "white" }} />,
     route: "/cart",
   },
   {
+    id: 2,
     component: <FavoriteBorderOutlinedIcon style={{ fill: "white" }} />,
     route: "/favourites",
   },
   {
+    id: 3,
     component: <NotificationsOutlinedIcon style={{ fill: "white" }} />,
     route: "/notifications",
   },
@@ -30,13 +33,17 @@ const navbarIcons = [
 const LargeNavbar = () => {
   return (
     <div className="flex items-center justify-between gap-6 mr-3 max-w-5xl:hidden ">
-      {navbar.map(({ component, route }, i) => (
-        <Link className="font-semibold no-underline text-black" to={route}>
+      {navbar.map(({ id, component, route }, i) => (
+        <Link
+          key={id}
+          className="font-semibold no-underline text-black"
+          to={route}
+        >
           {component}
         </Link>
       ))}
-      {navbarIcons.map(({ component, route }, i) => (
-        <Link className="flex bg-[black] p-2 rounded-[50%]" to={route}>
+      {navbarIcons.map(({ id, component, route }, i) => (
+        <Link key={id} className="flex bg-[black] p-2 rounded-[50%]" to={route}>
           {component}
         </Link>
       ))}

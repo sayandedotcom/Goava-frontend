@@ -34,7 +34,8 @@ const Signin = () => {
             <Button buttonType="inverted" type="submit">
               Sign n
             </Button>
-            <Button buttonType="google" type="submit">
+            <h1 className="text-2xl">OR</h1>
+            <Button buttonType="google">
               <img src={Google} alt="" />
               Google
             </Button>
