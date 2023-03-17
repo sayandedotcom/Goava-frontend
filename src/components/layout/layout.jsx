@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
         onLoaderFinished={() => dispatch(initialProgress())}
       />
       <Navbar />
-      <div style={{ marginTop: "100px", paddingTop: "1rem" }}>{children}</div>
+      <div style={{ marginTop: "100px", paddingTop: "0.6rem" }}>{children}</div>
       <Footer />
     </>
   );

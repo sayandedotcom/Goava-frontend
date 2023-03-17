@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/button/button";
+import Google from "../../assests/svg-google.svg";
+import Facebook from "../../assests/svg-facebook.svg";
 import FormInput from "../../components/input/input";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -41,7 +43,7 @@ const Signup = () => {
   console.log(errors);
 
   return (
-    <div className="flex flex-col justify-center items-center ">
+    <div className="flex flex-col justify-center items-center h-auto mb-24 gap-4">
       <p className="text-4xl font-black uppercase">Sign up</p>
       <div className="flex flex-row items-center gap-4 mt-3">
         <p className="text-xl  font-bold">Already have an Account ?</p>
@@ -49,7 +51,7 @@ const Signup = () => {
           <Button buttonType="inverted">Sign In</Button>
         </Link>
       </div>
-      <div className="flex flex-col gap-3 mt-5 text-center font-semibold h-[30rem]	w-80">
+      <div className="flex flex-col gap-3 mt-5 text-center font-semibold w-80">
         <p>Sign up with your Email and Password</p>
         <hr className="border-1 border-black" />
 
@@ -83,9 +85,20 @@ const Signup = () => {
             errorMessage={errors.confirmPassword?.message}
           />
           <Button buttonType="inverted" type="submit">
-            Submit
+            Sign Up
           </Button>
         </form>
+      </div>
+      <h1 className="text-2xl font-bold">OR</h1>
+      <div className="flex items-center justify-center gap-4">
+        <Button buttonType="google">
+          <img src={Google} alt="" />
+          Google
+        </Button>
+        <Button buttonType="google">
+          <img src={Facebook} alt="" />
+          Facebook
+        </Button>
       </div>
     </div>
   );

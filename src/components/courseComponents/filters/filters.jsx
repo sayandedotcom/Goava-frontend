@@ -40,7 +40,7 @@ const Filters = () => {
             {activeArray.includes(filter) && (
               <CloseRoundedIcon
                 onClick={removeFilter(filter)}
-                className="hover:bg-[#ff4949] rounded-[50%] ml-1 hover:text-white"
+                className=" ml-1 hover:text-red-600"
               />
             )}
           </span>
