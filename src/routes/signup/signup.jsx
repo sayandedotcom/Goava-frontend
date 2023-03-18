@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import Button from "../../components/button/button";
 import Google from "../../assests/svg-google.svg";
 import Facebook from "../../assests/svg-facebook.svg";
 import FormInput from "../../components/input/input";
 import NewTooltip from "../../components/tooltip/tooltip";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 
 const schema = yup
   .object({

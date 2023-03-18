@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import Navbar from "../navbar/navbar";
-import LoadingBar from "react-top-loading-bar";
 import { useDispatch, useSelector } from "react-redux";
 import { fullProgress, initialProgress } from "../../redux/loaderSlice.js";
+import Navbar from "../navbar/navbar";
+import LoadingBar from "react-top-loading-bar";
 import Footer from "../footer/footer";
 
 const Layout = ({ children }) => {
