@@ -7,7 +7,7 @@ const Cart = () => {
   return (
     <div>
       Cart
-      <NewTooltip>
+      <NewTooltip items="Checkout">
         <Link to={"/checkout"}>
           <Button buttonType="inverted">Checkout</Button>
         </Link>
