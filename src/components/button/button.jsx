@@ -5,12 +5,13 @@ export const BUTTON_TYPE_CLASSES = {
     "bg-black text-white  hover:bg-white hover:text-black hover:ring-1 hover:ring-black",
   google:
     "bg-white text-black hover:bg-white ring-1 hover:text-black hover:ring-1 hover:ring-blue-600",
+  blue: "bg-blue-500 text-white hover:bg-white ring-1 hover:text-black hover:ring-1 hover:ring-blue-600",
 };
 
-const Button = ({ children, buttonType, ...otherProps }) => {
+const Button = ({ children, buttonType, className, ...otherProps }) => {
   return (
     <button
-      className={`flex justify-center gap-2  font-semibold px-5 py-[0.4rem] rounded-[4px]  ${BUTTON_TYPE_CLASSES[buttonType]}`}
+      className={`flex justify-center gap-2  font-semibold px-5 py-[0.4rem] rounded-[4px]  ${BUTTON_TYPE_CLASSES[buttonType]} ${className}`}
       {...otherProps}
     >
       {children}
