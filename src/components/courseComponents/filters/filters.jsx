@@ -19,6 +19,15 @@ const filters = [
 const Filters = () => {
   const [activeFilter, setActiveFilter] = useState(["All"]);
 
+  const handleChange = (e) => {
+    if (activeFilter.includes(e.target.value)) {
+      setActiveFilter([
+        ...activeFilter.filter((active) => active !== e.target.value),
+      ]);
+    } else {
+      setActiveFilter([...activeFilter, e.target.value]);
+    }
+  };
   return (
     <>
       <div className="flex justify-center items-center font-black p-1 text-xl">
@@ -29,7 +38,7 @@ const Filters = () => {
         {filters.map((filter) => (
           <Radio
             value={filter}
-            onChange={(e) => setActiveFilter([...activeFilter, e.target.value])}
+            onChange={handleChange}
             checked={activeFilter.includes(filter) && "true"}
           />
         ))}

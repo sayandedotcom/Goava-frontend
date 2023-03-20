@@ -5,7 +5,7 @@ const Radio = ({ value, ...otherProps }) => {
     <div className="flex items-center justify-start p-1">
       <input
         className="cursor-pointer w-8"
-        type="radio"
+        type="checkbox"
         value={value}
         {...otherProps}
       />
