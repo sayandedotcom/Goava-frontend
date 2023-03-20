@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fullProgress } from "../../redux/loaderSlice";
 import Filters from "../../components/courseComponents/filters/filters";
@@ -12,12 +12,6 @@ const Course = () => {
   }, []);
 
   const dispatch = useDispatch();
-
-  // const [value, setValue] = useState(0);
-
-  // const handleChange = (event) => {
-  //   setValue(event.target.value);
-  // };
 
   return (
     <>
