@@ -16,7 +16,6 @@ const filters = [
 ];
 
 const Filters = () => {
-  // const [active, setActive] = useState("All");
   const [activeArray, setActiveArray] = useState(["All"]);
 
   const removeFilter = (filter) => {

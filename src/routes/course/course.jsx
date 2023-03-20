@@ -22,8 +22,8 @@ const Course = () => {
   return (
     <>
       <Input />
-      <div className="flex flex-row bg-[#e7e9ec]">
-        <div className="flex flex-col items-center m-2 w-3/12 p-3 gap-4 bg-[#ffffff] rounded-xl">
+      <div className="flex flex-row bg-[#e7e9ec] mt-16">
+        <div className="flex flex-col items-center h-auto m-2 w-3/12 p-3 gap-4 bg-[#ffffff] rounded-xl">
           <Filters />
           <h1>{value}</h1>
           <Range
@@ -34,7 +34,6 @@ const Course = () => {
             step={10}
           />
         </div>
-
         <CourseList />
       </div>
     </>

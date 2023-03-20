@@ -1,11 +1,17 @@
 import React from "react";
 import ReportGmailerrorredRoundedIcon from "@mui/icons-material/ReportGmailerrorredRounded";
 
-const FormInput = ({ children, register, errorMessage, ...otherProps }) => {
+const FormInput = ({
+  children,
+  register,
+  errorMessage,
+  className,
+  ...otherProps
+}) => {
   return (
     <div>
       <input
-        className="py-1 pl-3 w-80 font-semibold	border-2 border-black"
+        className={`py-1 pl-3 w-80 font-semibold	border-2 border-black ${className}`}
         {...register}
         {...otherProps}
       >
