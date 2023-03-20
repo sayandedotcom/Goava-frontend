@@ -1,7 +1,6 @@
 import React from "react";
 import Footersection from "./footerSection/footerSection";
 import Footeritems from "./footerItems/footerItems";
-import "./footer.css";
 
 const example = [
   { id: 1, name: "Example1", link: "https://sayande.tech/", icons: "" },
@@ -9,6 +8,15 @@ const example = [
   { id: 3, name: "Example3", link: "https://sayande.tech/", icons: "" },
   { id: 4, name: "Example4", link: "https://sayande.tech/", icons: "" },
   { id: 5, name: "Example5", link: "https://sayande.tech/", icons: "" },
+];
+const buinessHours = [
+  { id: 1, name: "Mon:	9:00 AM – 9:00 PM" },
+  { id: 2, name: "Tue:	9:00 AM – 9:00 PM" },
+  { id: 3, name: "Wed:	9:00 AM – 9:00 PM" },
+  { id: 4, name: "Thu:	9:00 AM – 9:00 PM" },
+  { id: 5, name: "Fri:	9:00 AM – 9:00 PM" },
+  { id: 6, name: "Sat:	9:00 AM – 9:00 PM" },
+  { id: 7, name: "Sun:	9:00 AM – 9:00 PM" },
 ];
 const socials = [
   { id: 1, name: "Facebook", link: "https://sayande.tech/", icons: "" },
@@ -41,13 +49,11 @@ const Footer = () => {
         </Footersection>
 
         <Footersection>
-          <p className="text-xl font-black mb-1">Help</p>
+          <p className="text-xl font-black mb-1">Buiness Hours</p>
           <hr />
           <Footeritems>
-            {example.map(({ id, name, link }) => (
-              <a key={id} href={link} target="blank">
-                {name}
-              </a>
+            {buinessHours.map(({ id, name }) => (
+              <p key={id}>{name}</p>
             ))}
           </Footeritems>
         </Footersection>
