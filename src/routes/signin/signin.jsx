@@ -54,7 +54,7 @@ const Signin = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <FormInput
             placeholder="Email Address"
-            type="email"
+            type="text"
             name="email"
             register={{ ...register("email") }}
             errorMessage={errors.email?.message}

@@ -66,7 +66,7 @@ const Signup = () => {
           />
           <FormInput
             placeholder="Email Address"
-            type="email"
+            type="text"
             name="email"
             register={{ ...register("email") }}
             errorMessage={errors.email?.message}
