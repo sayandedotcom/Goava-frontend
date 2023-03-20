@@ -5,8 +5,9 @@ import { fullProgress } from "../../redux/loaderSlice";
 import Button from "../../components/button/button";
 import Number from "../../components/aboutComponents/numbers/numbers";
 import Socials from "../../components/aboutComponents/socials/socials";
-import Review from "../../components/aboutComponents/review/review";
+import Testimonials from "../../components/aboutComponents/testimonials/testimonials";
 import Team from "../../components/aboutComponents/team/team";
+import Location from "../../components/aboutComponents/location/location";
 
 const About = () => {
   const dispatch = useDispatch();
@@ -19,8 +20,8 @@ const About = () => {
     <div className="flex flex-col items-center justify-center my-3 gap-6">
       <Team />
       <Number />
-      <Review />
-      <div>Locations</div>
+      <Testimonials />
+      <Location />
       <Socials />
       <Link to={"/courses"}>
         <Button className="rounded-none" buttonType="inverted">
