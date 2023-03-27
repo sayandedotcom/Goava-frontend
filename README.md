@@ -18,7 +18,7 @@ Online Course Selling Website Website made with Reactjs.
 - [react-countup](https://www.npmjs.com/package/react-countup) - Used for Count Animation
 - [better-react-carousel](https://www.npmjs.com/package/better-react-carousel) - Used for Count Animation
 - [react-top-loading-bar](https://www.npmjs.com/package/react-top-loading-bar) - Used for top loading
-- [Docker](https://www.docker.com/) - Used for Dockerization
+- [Docker](https://www.docker.com/) - Used for Containerization
 
 <!-- ## 📌 Sneak Peek of Main Page:
 
