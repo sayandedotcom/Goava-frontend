@@ -16,6 +16,7 @@ Online Course Selling Website Website made with Reactjs.
 - [react-hook-form](https://www.npmjs.com/package/react-hook-form) - Used for Forms
 - [yup](https://www.npmjs.com/package/yup) - Used for Form Validation
 - [react-countup](https://www.npmjs.com/package/react-countup) - Used for Count Animation
+- [better-react-carousel](https://www.npmjs.com/package/better-react-carousel) - Used for Count Animation
 - [react-top-loading-bar](https://www.npmjs.com/package/react-top-loading-bar) - Used for top loading
 - [Docker](https://www.docker.com/) - Used for Dockerization
 
