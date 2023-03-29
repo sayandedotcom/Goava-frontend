@@ -41,7 +41,7 @@ const LargeNavigation = () => {
         </Link>
       ))}
       <Link
-        to="signin"
+        to="login"
         className="font-semibold bg-black text-white px-5 py-[0.4rem] rounded-[4px] hover:bg-white hover:text-black hover:ring hover:ring-black"
       >
         Sign In

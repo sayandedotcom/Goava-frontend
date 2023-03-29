@@ -11,7 +11,7 @@ const Favourites = lazy(() => import("./routes/favourites/favourites"));
 const Notifications = lazy(() =>
   import("./routes/notifications/notifications")
 );
-const Signin = lazy(() => import("./routes/signin/signin"));
+const Login = lazy(() => import("./routes/login/login"));
 const Signup = lazy(() => import("./routes/signup/signup"));
 const Admin = lazy(() => import("./routes/admin/admin"));
 const ErrorPage = lazy(() => import("./routes/error/error"));
@@ -90,11 +90,11 @@ function App() {
         }
       />
       <Route
-        path="/signin"
+        path="/login"
         element={
           <Layout>
             <Suspense fallback={<Spinner />}>
-              <Signin />
+              <Login />
             </Suspense>
           </Layout>
         }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -22,7 +22,8 @@ const schema = yup
   })
   .required();
 
-const Signin = () => {
+const Login = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -32,10 +33,21 @@ const Signin = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async ({ email, password }) => {
+    let result = await fetch("http://localhost:4000/api/v1/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    result = await result.json();
+    // localStorage.setItem("token", JSON.stringify(result.token));
+    console.log(result);
     reset();
+    navigate("/");
   };
+
   console.log(errors);
 
   return (
@@ -90,4 +102,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Login;

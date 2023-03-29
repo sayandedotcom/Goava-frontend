@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -11,7 +11,7 @@ import NewTooltip from "../../components/tooltip/tooltip";
 
 const schema = yup
   .object({
-    fullName: yup.string().required("Full Name is required"),
+    name: yup.string().required("Full Name is required"),
     email: yup
       .string()
       .required("Email is required")
@@ -28,6 +28,7 @@ const schema = yup
   .required();
 
 const Signup = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -37,9 +38,19 @@ const Signup = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async ({ name, email, password }) => {
+    let result = await fetch("http://localhost:4000/api/v1/signup", {
+      method: "POST",
+      body: JSON.stringify({ name, email, password }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    result = await result.json();
+    localStorage.setItem("token", JSON.stringify(result.token));
+    console.log(result);
     reset();
+    navigate("/");
   };
   console.log(errors);
 
@@ -48,7 +59,7 @@ const Signup = () => {
       <p className="text-4xl font-black uppercase">Sign up</p>
       <div className="flex flex-row items-center gap-4 mt-3">
         <p className="text-xl  font-bold">Already have an Account ?</p>
-        <Link to={"/signin"}>
+        <Link to={"/login"}>
           <Button buttonType="inverted">Sign In</Button>
         </Link>
       </div>
@@ -60,9 +71,9 @@ const Signup = () => {
           <FormInput
             placeholder="Full Name"
             type="text"
-            name="fullName"
-            register={{ ...register("fullName") }}
-            errorMessage={errors.fullName?.message}
+            name="name"
+            register={{ ...register("name") }}
+            errorMessage={errors.name?.message}
           />
           <FormInput
             placeholder="Email Address"

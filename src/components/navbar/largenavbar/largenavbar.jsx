@@ -57,9 +57,9 @@ const LargeNavbar = () => {
           </Link>
         </NewTooltip>
       ))}
-      <Link to="/signin">
+      <Link to="/login">
         <NewTooltip title="Sign In">
-          <Button buttonType="inverted">Sign In</Button>
+          <Button buttonType="inverted">Log In</Button>
         </NewTooltip>
       </Link>
       <Link to="/signup">
