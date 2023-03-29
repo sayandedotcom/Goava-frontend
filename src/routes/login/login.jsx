@@ -79,7 +79,7 @@ const Login = () => {
             errorMessage={errors.password?.message}
           />
           <Button buttonType="inverted" type="submit">
-            Sign In
+            Log In
           </Button>
         </form>
       </div>

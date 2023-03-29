@@ -60,7 +60,7 @@ const Signup = () => {
       <div className="flex flex-row items-center gap-4 mt-3">
         <p className="text-xl  font-bold">Already have an Account ?</p>
         <Link to={"/login"}>
-          <Button buttonType="inverted">Sign In</Button>
+          <Button buttonType="inverted">Log In</Button>
         </Link>
       </div>
       <div className="flex flex-col gap-3 mt-5 text-center font-semibold w-80">
