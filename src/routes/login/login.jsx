@@ -93,12 +93,6 @@ const Login = () => {
             Google
           </Button>
         </NewTooltip>
-        <NewTooltip title="Sign In with Facebook">
-          <Button buttonType="google">
-            <img src={Facebook} alt="" />
-            Facebook
-          </Button>
-        </NewTooltip>
       </div>
     </div>
   );
