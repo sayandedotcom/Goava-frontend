@@ -1,0 +1,18 @@
+{
+  // List of extensions which should be recommended for users of this workspace.
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "aaron-bond.better-comments",
+    "dsznajder.es7-react-js-snippets",
+    "wix.vscode-import-cost",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "PKief.material-icon-theme",
+    "2gua.rainbow-brackets",
+    "christian-kohler.path-intellisense"
+  ],
+  // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+  "unwantedRecommendations": []
+}
