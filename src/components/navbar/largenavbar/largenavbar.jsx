@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import Button from "../../button/button";
 import NewTooltip from "../../tooltip/tooltip";
 
@@ -31,7 +30,6 @@ const navbarIcons = [
     component: <NotificationsOutlinedIcon style={{ fill: "white" }} />,
     route: "/notifications",
   },
-  // { component: <AccountCircleOutlinedIcon />, route: "profile" },
 ];
 
 const LargeNavbar = () => {
@@ -58,12 +56,12 @@ const LargeNavbar = () => {
         </NewTooltip>
       ))}
       <Link to="/login">
-        <NewTooltip title="Sign In">
+        <NewTooltip title="Log In">
           <Button buttonType="inverted">Log In</Button>
         </NewTooltip>
       </Link>
       <Link to="/signup">
-        <NewTooltip title="Sign In">
+        <NewTooltip title="Sign Up">
           <Button buttonType="inverted">Sign Up</Button>
         </NewTooltip>
       </Link>
