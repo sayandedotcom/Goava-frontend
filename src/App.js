@@ -1,20 +1,18 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import Spinner from "./components/spinner/spinner";
-import Layout from "./components/layout/layout";
-const HomePage = lazy(() => import("./routes/home/home"));
-const CoursePage = lazy(() => import("./routes/course/course"));
-const AboutPage = lazy(() => import("./routes/about/about"));
-const Cart = lazy(() => import("./routes/cart/cart"));
-const Checkout = lazy(() => import("./routes/checkout/checkout"));
-const Favourites = lazy(() => import("./routes/favourites/favourites"));
-const Notifications = lazy(() =>
-  import("./routes/notifications/notifications")
-);
-const Login = lazy(() => import("./routes/login/login"));
-const Signup = lazy(() => import("./routes/signup/signup"));
-const Admin = lazy(() => import("./routes/admin/admin"));
-const ErrorPage = lazy(() => import("./routes/error/error"));
+import Spinner from "components/spinner/spinner";
+import Layout from "components/layout/layout";
+const HomePage = lazy(() => import("routes/home/home"));
+const CoursePage = lazy(() => import("routes/course/course"));
+const AboutPage = lazy(() => import("routes/about/about"));
+const Cart = lazy(() => import("routes/cart/cart"));
+const Checkout = lazy(() => import("routes/checkout/checkout"));
+const Favourites = lazy(() => import("routes/favourites/favourites"));
+const Notifications = lazy(() => import("routes/notifications/notifications"));
+const Login = lazy(() => import("routes/login/login"));
+const Signup = lazy(() => import("routes/signup/signup"));
+const Admin = lazy(() => import("routes/admin/admin"));
+const ErrorPage = lazy(() => import("routes/error/error"));
 
 function App() {
   return (
