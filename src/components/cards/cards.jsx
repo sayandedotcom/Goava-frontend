@@ -8,19 +8,19 @@ const Cards = () => {
   return (
     <>
       {cardItems.map(({id, image, tags, title, price}) => (
-        <div className='w-80 p-3 bg-[#2c4152] rounded-xl text-zinc-100 font-semibold'>
+        <div className='w-80 rounded-xl bg-[#2c4152] p-3 font-semibold text-zinc-100'>
           <div>
             <img className='rounded-xl' src={image} alt='' />
           </div>
           <div>
             <div className='flex gap-2 p-1'>
               {tags.map((tag) => (
-                <span className='bg-slate-800 p-1 rounded-lg text-sm cursor-pointer'>
+                <span className='cursor-pointer rounded-lg bg-slate-800 p-1 text-sm'>
                   {tag}
                 </span>
               ))}
             </div>
-            <p className='p-1 cursor-pointer'>{title}</p>
+            <p className='cursor-pointer p-1'>{title}</p>
             <p className='p-1'>{price}</p>
           </div>
           <div className='flex flex-col gap-2'>

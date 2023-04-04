@@ -10,11 +10,11 @@ const Navbar = () => {
 
   return (
     <header
-      className='nav flex flex-row justify-between w-full z-[101] bg-white fixed top-0 shadow-[0_3px_6px_0_rgb(0_0_0_/_20%)]
-      uppercase no-underline h-[100px]
-       border-t-[3px] border-b-[#e0e0e0] border-solid border-b '>
+      className='nav fixed top-0 z-[101] flex h-[100px] w-full flex-row justify-between border-t-[3px]
+      border-b border-solid border-b-[#e0e0e0]
+       bg-white uppercase no-underline shadow-[0_3px_6px_0_rgb(0_0_0_/_20%)] '>
       <Link
-        className='logo flex items-center justify-center no-underline text-[black] text-[2rem] font-bold px-8 py-0'
+        className='logo flex items-center justify-center px-8 py-0 text-[2rem] font-bold text-[black] no-underline'
         to='/'
         onClick={() => dispatch(fullProgress())}>
         <NewTooltip title='Go Home'>Goava</NewTooltip>

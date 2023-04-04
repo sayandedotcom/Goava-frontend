@@ -35,9 +35,9 @@ const contact = [
 const Footer = () => {
   return (
     <>
-      <div className='bg-[#2c4152] text-white uppercase flex justify-around flex-wrap py-16'>
+      <div className='flex flex-wrap justify-around bg-[#2c4152] py-16 uppercase text-white'>
         <Footersection>
-          <p className='text-xl font-black mb-1'>Goava</p>
+          <p className='mb-1 text-xl font-black'>Goava</p>
           <hr />
           <Footeritems>
             {example.map(({id, name, link}) => (
@@ -49,7 +49,7 @@ const Footer = () => {
         </Footersection>
 
         <Footersection>
-          <p className='text-xl font-black mb-1'>Buiness Hours</p>
+          <p className='mb-1 text-xl font-black'>Buiness Hours</p>
           <hr />
           <Footeritems>
             {buinessHours.map(({id, name}) => (
@@ -59,7 +59,7 @@ const Footer = () => {
         </Footersection>
 
         <Footersection>
-          <p className='text-xl font-black mb-1'>Socials</p>
+          <p className='mb-1 text-xl font-black'>Socials</p>
           <hr />
           <Footeritems>
             {socials.map(({id, name, link}) => (
@@ -71,7 +71,7 @@ const Footer = () => {
         </Footersection>
 
         <Footersection>
-          <p className='text-xl font-black mb-1'>Contact Us</p>
+          <p className='mb-1 text-xl font-black'>Contact Us</p>
           <hr />
           <Footeritems>
             {contact.map(({id, name, link}) => (

@@ -16,8 +16,8 @@ const Course = () => {
   return (
     <>
       <Input />
-      <div className='flex flex-row bg-[#e7e9ec] mt-16'>
-        <div className='flex flex-col items-center m-2 w-3/12 p-3 gap-4 bg-[#ffffff] rounded-xl'>
+      <div className='mt-16 flex flex-row bg-[#e7e9ec]'>
+        <div className='m-2 flex w-3/12 flex-col items-center gap-4 rounded-xl bg-[#ffffff] p-3'>
           <Filters />
           <Range />
         </div>

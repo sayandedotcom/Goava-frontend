@@ -6,21 +6,21 @@ const Number = () => {
   return (
     <div>
       <Heading id='#numbers'>Our Numbers</Heading>
-      <hr className='border-4 mt-5' />
-      <div className='flex flex-wrap mt-5 gap-5'>
-        <div className='flex flex-col justify-center items-center p-7 border-2'>
+      <hr className='mt-5 border-4' />
+      <div className='mt-5 flex flex-wrap gap-5'>
+        <div className='flex flex-col items-center justify-center border-2 p-7'>
           <Countup end={23000} duration={4} suffix=' +' />
           <h1 className='text-xl font-black'>Students</h1>
         </div>
-        <div className='flex flex-col justify-center items-center p-7 border-2'>
+        <div className='flex flex-col items-center justify-center border-2 p-7'>
           <Countup end={155} duration={4} suffix=' +' />
           <h1 className='text-xl font-black'>Courses</h1>
         </div>
-        <div className='flex flex-col justify-center items-center p-7 border-2'>
+        <div className='flex flex-col items-center justify-center border-2 p-7'>
           <Countup end={10} duration={4} prefix='₹ ' suffix=' crore +' />
           <h1 className='text-xl font-black'>Profits</h1>
         </div>
-        <div className='flex flex-col justify-center items-center p-7 border-2'>
+        <div className='flex flex-col items-center justify-center border-2 p-7'>
           <Countup
             end={4.5}
             decimals={1}

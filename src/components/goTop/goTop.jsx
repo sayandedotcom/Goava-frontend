@@ -31,7 +31,7 @@ const GoTop = () => {
         <NewTooltip title='Scroll to top'>
           <button
             onClick={toTop}
-            className='flex z-50 fixed rounded-[50%] p-2 bg-black'
+            className='fixed z-50 flex rounded-[50%] bg-black p-2'
             aria-label='Click here to scroll to top'>
             <KeyboardArrowUpIcon
               className='z-10 text-white'

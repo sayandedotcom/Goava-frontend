@@ -55,15 +55,15 @@ const Signup = () => {
   console.log(errors);
 
   return (
-    <div className='flex flex-col justify-center items-center h-auto mb-24 gap-4'>
+    <div className='mb-24 flex h-auto flex-col items-center justify-center gap-4'>
       <p className='text-4xl font-black uppercase'>Sign up</p>
-      <div className='flex flex-row items-center gap-4 mt-3'>
+      <div className='mt-3 flex flex-row items-center gap-4'>
         <p className='text-xl  font-bold'>Already have an Account ?</p>
         <Link to={'/login'}>
           <Button buttonType='inverted'>Log In</Button>
         </Link>
       </div>
-      <div className='flex flex-col gap-3 mt-5 text-center font-semibold w-80'>
+      <div className='mt-5 flex w-80 flex-col gap-3 text-center font-semibold'>
         <p>Sign up with your Email and Password</p>
         <hr className='border-1 border-black' />
 

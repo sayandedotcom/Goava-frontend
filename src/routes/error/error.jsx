@@ -7,7 +7,7 @@ import Button from 'components/button/button';
 const Error = () => {
   const navigate = useNavigate();
   return (
-    <div className='flex flex-col justify-center items-center gap-8 p-5 h-[70vh]'>
+    <div className='flex h-[70vh] flex-col items-center justify-center gap-8 p-5'>
       <span className='text-6xl font-black'> ERROR 404 ! </span>{' '}
       <span className='text-xl font-bold'>
         Page Not Found Unfortunately, The Page You Are Looking For Does Not

@@ -30,7 +30,7 @@ const Filters = () => {
   };
   return (
     <>
-      <div className='flex justify-center items-center font-black p-1 text-xl'>
+      <div className='flex items-center justify-center p-1 text-xl font-black'>
         <TuneIcon /> <span className='mx-3'>Filters</span>
       </div>
       <hr className='w-full border-t-black' />

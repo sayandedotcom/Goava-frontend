@@ -17,7 +17,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className='flex flex-col items-center justify-center my-3 gap-6'>
+    <div className='my-3 flex flex-col items-center justify-center gap-6'>
       <Team />
       <Number />
       <Testimonials />

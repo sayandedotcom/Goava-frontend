@@ -11,7 +11,7 @@ export const BUTTON_TYPE_CLASSES = {
 const Button = ({children, buttonType, className, ...otherProps}) => {
   return (
     <button
-      className={`flex justify-center items-center gap-2 font-semibold px-5 py-[0.4rem]   ${BUTTON_TYPE_CLASSES[buttonType]} ${className}`}
+      className={`flex items-center justify-center gap-2 px-5 py-[0.4rem] font-semibold   ${BUTTON_TYPE_CLASSES[buttonType]} ${className}`}
       {...otherProps}>
       {children}
     </button>

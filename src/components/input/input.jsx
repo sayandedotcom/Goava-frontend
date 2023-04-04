@@ -11,13 +11,13 @@ const FormInput = ({
   return (
     <div>
       <input
-        className={`py-1 pl-3 w-80 font-semibold	border-2 border-black ${className}`}
+        className={`w-80 border-2 border-black py-1	pl-3 font-semibold ${className}`}
         {...register}
         {...otherProps}>
         {children}
       </input>
       {errorMessage && (
-        <p className='flex items-center justify-center gap-1 text-red-600 mt-1'>
+        <p className='mt-1 flex items-center justify-center gap-1 text-red-600'>
           <ReportGmailerrorredRoundedIcon />
           {errorMessage}
         </p>

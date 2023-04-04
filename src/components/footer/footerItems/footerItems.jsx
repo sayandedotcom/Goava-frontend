@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footeritems = ({children}) => {
-  return <div className='flex flex-col font-light mt-4'>{children}</div>;
+  return <div className='mt-4 flex flex-col font-light'>{children}</div>;
 };
 
 export default Footeritems;

@@ -7,15 +7,15 @@ const Input = () => {
   return (
     <form
       action=''
-      className='flex justify-center items-center gap-3 p-4 fixed top-[100px] left-0 right-0 bg-[#ffffff] z-50'>
+      className='fixed top-[100px] left-0 right-0 z-50 flex items-center justify-center gap-3 bg-[#ffffff] p-4'>
       <FormInput
-        className='w-96 py-2 rounded-xl'
+        className='w-96 rounded-xl py-2'
         type='text'
         placeholder='Search Courses'
         name='search'
       />
       <NewTooltip title='Search'>
-        <Button buttonType='inverted' className='rounded-[50%] h-11 w-11'>
+        <Button buttonType='inverted' className='h-11 w-11 rounded-[50%]'>
           <SearchRoundedIcon />
         </Button>
       </NewTooltip>

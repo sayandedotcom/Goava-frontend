@@ -3,7 +3,7 @@ import Cards from '../../cards/cards';
 
 const CourseList = () => {
   return (
-    <div className='w-9/12 p-3 m-2 bg-[#ffffff] rounded-xl flex justify-around flex-wrap gap-5'>
+    <div className='m-2 flex w-9/12 flex-wrap justify-around gap-5 rounded-xl bg-[#ffffff] p-3'>
       <Cards />
       <Cards />
       <Cards />

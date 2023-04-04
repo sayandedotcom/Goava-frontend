@@ -29,25 +29,25 @@ const navigationsIcons = [
 
 const LargeNavigation = () => {
   return (
-    <div className='flex items-center justify-between gap-6 mr-3 max-w-5xl:hidden '>
+    <div className='max-w-5xl:hidden mr-3 flex items-center justify-between gap-6 '>
       {navigations.map(({component, route}, i) => (
-        <Link className='font-semibold no-underline text-black' to={route}>
+        <Link className='font-semibold text-black no-underline' to={route}>
           {component}
         </Link>
       ))}
       {navigationsIcons.map(({component, route}, i) => (
-        <Link className='flex bg-[black] p-2 rounded-[50%]' to={route}>
+        <Link className='flex rounded-[50%] bg-[black] p-2' to={route}>
           {component}
         </Link>
       ))}
       <Link
         to='login'
-        className='font-semibold bg-black text-white px-5 py-[0.4rem] rounded-[4px] hover:bg-white hover:text-black hover:ring hover:ring-black'>
+        className='rounded-[4px] bg-black px-5 py-[0.4rem] font-semibold text-white hover:bg-white hover:text-black hover:ring hover:ring-black'>
         Sign In
       </Link>
       <Link
         to='signup'
-        className='font-semibold bg-black text-white px-5 py-[0.4rem] rounded-[4px] hover:bg-white hover:text-black hover:ring hover:ring-black'>
+        className='rounded-[4px] bg-black px-5 py-[0.4rem] font-semibold text-white hover:bg-white hover:text-black hover:ring hover:ring-black'>
         Sign Up
       </Link>
     </div>

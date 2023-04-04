@@ -34,11 +34,11 @@ const navbarIcons = [
 
 const LargeNavbar = () => {
   return (
-    <div className='flex items-center justify-between gap-6 mr-3 max-w-5xl:hidden '>
+    <div className='max-w-5xl:hidden mr-3 flex items-center justify-between gap-6 '>
       {navbar.map(({id, component, route}) => (
         <Link
           key={id}
-          className='font-semibold no-underline text-black'
+          className='font-semibold text-black no-underline'
           to={route}>
           {component}
         </Link>
@@ -47,7 +47,7 @@ const LargeNavbar = () => {
         <NewTooltip title={tooltip}>
           <Link
             key={id}
-            className='flex bg-[black] p-2 rounded-[50%]'
+            className='flex rounded-[50%] bg-[black] p-2'
             to={route}>
             {component}
           </Link>
