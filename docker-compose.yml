@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  portfolio:
+    build: .
+    container_name: goava_frontend
+    ports:
+      - '3000:3000'
