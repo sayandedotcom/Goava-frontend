@@ -9,7 +9,6 @@ Online Course Selling Website Website made with Reactjs.
 - [ReactJS](https://reactjs.org) - Javascript library
 - [React-Router](https://www.npmjs.com/package/react-router) - Used for Routing
 - [Redux-Toolkit](https://redux-toolkit.js.org/) - Used for State Management specially for Dark Mode
-<!-- - [Material UI](https://mui.com/) - Used for Mobile Responsiveness (Grid) -->
 - [Tailwind CSS](https://tailwindcss.com/) - Used for Styling
 - [Material UI-Icons](https://react-icons.github.io/react-icons/) - Used for Icons
 - [react-tippy](https://www.npmjs.com/package/react-tippy) - Used tooltip
@@ -19,19 +18,6 @@ Online Course Selling Website Website made with Reactjs.
 - [better-react-carousel](https://www.npmjs.com/package/better-react-carousel) - Used for Count Animation
 - [react-top-loading-bar](https://www.npmjs.com/package/react-top-loading-bar) - Used for top loading
 - [Docker](https://www.docker.com/) - Used for Containerization
-
-<!-- ## 📌 Sneak Peek of Main Page:
-
-<div align="center" style="
-    flex-wrap: wrap;
-    display: flex;
-    gap: 1rem;
-">
-<h1> Light Mode </h1>
-  <img src="https://user-images.githubusercontent.com/107565578/209658089-85462f6e-7550-428d-9000-965e2c56e526.png" alt="Home Page" width="70%">
-<h1> Dark Mode </h1>
-  <img src="https://user-images.githubusercontent.com/107565578/209658335-d8301a73-b17b-40e4-a199-818a1e3ef4d8.png" alt="Home Page In Dark Mode" width="70%">
-</div> -->
 
 ## 📌 Getting Started 🚀
 
