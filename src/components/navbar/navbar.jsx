@@ -10,7 +10,8 @@ const Navbar = () => {
 
   return (
     <header
-      className="nav flex flex-row justify-between w-full z-[101] bg-white fixed top-0 shadow-[0_3px_6px_0_rgb(0_0_0_/_20%)] uppercase no-underline h-[100px]
+      className="nav flex flex-row justify-between w-full z-[101] bg-white fixed top-0 shadow-[0_3px_6px_0_rgb(0_0_0_/_20%)]
+      uppercase no-underline h-[100px]
        border-t-[3px] border-b-[#e0e0e0] border-solid border-b "
     >
       <Link
