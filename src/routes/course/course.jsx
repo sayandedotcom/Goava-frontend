@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { fullProgress } from "../../redux/loaderSlice";
-import Filters from "../../components/courseComponents/filters/filters";
-import CourseList from "../../components/courseComponents/courses/courseList";
-import Input from "../../components/courseComponents/input/input";
-import Range from "../../components/courseComponents/range/range";
+import { fullProgress } from "redux/loaderSlice";
+import Filters from "components/courseComponents/filters/filters";
+import CourseList from "components/courseComponents/courses/courseList";
+import Input from "components/courseComponents/input/input";
+import Range from "components/courseComponents/range/range";
 
 const Course = () => {
   useEffect(() => {

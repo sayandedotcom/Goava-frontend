@@ -3,11 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Button from "../../components/button/button";
-import Google from "../../assests/svg-google.svg";
-import Facebook from "../../assests/svg-facebook.svg";
-import FormInput from "../../components/input/input";
-import NewTooltip from "../../components/tooltip/tooltip";
+import Button from "components/button/button";
+import Google from "assests/svg-google.svg";
+import Facebook from "assests/svg-facebook.svg";
+import FormInput from "components/input/input";
+import NewTooltip from "components/tooltip/tooltip";
 
 const schema = yup
   .object({
@@ -46,9 +46,10 @@ const Signup = () => {
         "Content-Type": "application/json",
       },
     });
+    console.log("1", result);
     result = await result.json();
-    localStorage.setItem("token", JSON.stringify(result.token));
-    console.log(result);
+    // localStorage.setItem("token", JSON.stringify(result.token));
+    console.log("2", result);
     reset();
     navigate("/");
   };

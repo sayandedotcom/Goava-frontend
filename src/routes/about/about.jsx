@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { fullProgress } from "../../redux/loaderSlice";
-import Button from "../../components/button/button";
-import Number from "../../components/aboutComponents/numbers/numbers";
-import Socials from "../../components/aboutComponents/socials/socials";
-import Testimonials from "../../components/aboutComponents/testimonials/testimonials";
-import Team from "../../components/aboutComponents/team/team";
-import Location from "../../components/aboutComponents/location/location";
+import { fullProgress } from "redux/loaderSlice";
+import Button from "components/button/button";
+import Number from "components/aboutComponents/numbers/numbers";
+import Socials from "components/aboutComponents/socials/socials";
+import Testimonials from "components/aboutComponents/testimonials/testimonials";
+import Team from "components/aboutComponents/team/team";
+import Location from "components/aboutComponents/location/location";
 
 const About = () => {
   const dispatch = useDispatch();
