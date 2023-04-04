@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import TuneIcon from "@mui/icons-material/Tune";
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import Radio from "../radio/radio";
+import React, {useState} from 'react';
+import TuneIcon from '@mui/icons-material/Tune';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import Radio from '../radio/radio';
 
 const filters = [
-  "All",
-  "Offline Class",
-  "Tickets",
-  "Stocks",
-  "Swing Trading",
-  "Technical Analysis For Stock",
-  "Stock Recomendation",
-  "Intraday",
-  "Swing Trading Recomendation",
-  "Options Trading",
+  'All',
+  'Offline Class',
+  'Tickets',
+  'Stocks',
+  'Swing Trading',
+  'Technical Analysis For Stock',
+  'Stock Recomendation',
+  'Intraday',
+  'Swing Trading Recomendation',
+  'Options Trading',
 ];
 
 const Filters = () => {
-  const [activeFilter, setActiveFilter] = useState(["All"]);
+  const [activeFilter, setActiveFilter] = useState(['All']);
 
   const handleChange = (e) => {
     if (activeFilter.includes(e.target.value)) {
@@ -30,16 +30,16 @@ const Filters = () => {
   };
   return (
     <>
-      <div className="flex justify-center items-center font-black p-1 text-xl">
-        <TuneIcon /> <span className="mx-3">Filters</span>
+      <div className='flex justify-center items-center font-black p-1 text-xl'>
+        <TuneIcon /> <span className='mx-3'>Filters</span>
       </div>
-      <hr className="w-full border-t-black" />
-      <div className="my-3 w-full">
+      <hr className='w-full border-t-black' />
+      <div className='my-3 w-full'>
         {filters.map((filter) => (
           <Radio
             value={filter}
             onChange={handleChange}
-            checked={activeFilter.includes(filter) && "true"}
+            checked={activeFilter.includes(filter) && 'true'}
           />
         ))}
       </div>

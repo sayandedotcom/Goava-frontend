@@ -1,11 +1,11 @@
-const { createSlice } = require("@reduxjs/toolkit");
+const {createSlice} = require('@reduxjs/toolkit');
 
 const initialState = {
   progress: 0,
 };
 
 export const loaderSlice = createSlice({
-  name: "loader",
+  name: 'loader',
   initialState,
   reducers: {
     initialProgress: (state) => {
@@ -17,5 +17,5 @@ export const loaderSlice = createSlice({
   },
 });
 
-export const { initialProgress, fullProgress } = loaderSlice.actions;
+export const {initialProgress, fullProgress} = loaderSlice.actions;
 export default loaderSlice.reducer;

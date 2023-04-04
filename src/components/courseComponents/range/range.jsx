@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 
 const Range = () => {
   const [value, setValue] = useState(0);
@@ -10,8 +10,8 @@ const Range = () => {
     <div>
       {value}
       <input
-        className="w-56 cursor-pointer"
-        type="range"
+        className='w-56 cursor-pointer'
+        type='range'
         defaultValue={value}
         onChange={handleChange}
         min={0}

@@ -1,6 +1,6 @@
-import React from "react";
-import Carousel from "better-react-carousel";
-import Cards from "../../cards/cards";
+import React from 'react';
+import Carousel from 'better-react-carousel';
+import Cards from '../../cards/cards';
 const CardsCarousel = () => {
   return (
     <Carousel
@@ -10,8 +10,7 @@ const CardsCarousel = () => {
       autoplay={2000}
       loop
       showDots
-      dotColorActive="black"
-    >
+      dotColorActive='black'>
       <Carousel.Item>
         <Cards />
       </Carousel.Item>

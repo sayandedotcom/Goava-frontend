@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import NewTooltip from "../tooltip/tooltip";
+import React, {useState, useEffect} from 'react';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import NewTooltip from '../tooltip/tooltip';
 
 const GoTop = () => {
   const [goToTop, setgoToTop] = useState(false);
@@ -12,9 +12,9 @@ const GoTop = () => {
     }
   };
   useEffect(() => {
-    window.addEventListener("scroll", showBtn);
+    window.addEventListener('scroll', showBtn);
     return () => {
-      window.removeEventListener("scroll", showBtn);
+      window.removeEventListener('scroll', showBtn);
     };
   }, []);
 
@@ -22,21 +22,20 @@ const GoTop = () => {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
   return (
-    <div className="">
+    <div className=''>
       {goToTop && (
-        <NewTooltip title="Scroll to top">
+        <NewTooltip title='Scroll to top'>
           <button
             onClick={toTop}
-            className="flex z-50 fixed rounded-[50%] p-2 bg-black"
-            aria-label="Click here to scroll to top"
-          >
+            className='flex z-50 fixed rounded-[50%] p-2 bg-black'
+            aria-label='Click here to scroll to top'>
             <KeyboardArrowUpIcon
-              className="z-10 text-white"
-              style={{ fontSize: "2rem" }}
+              className='z-10 text-white'
+              style={{fontSize: '2rem'}}
             />
           </button>
         </NewTooltip>

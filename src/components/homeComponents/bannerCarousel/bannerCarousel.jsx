@@ -1,6 +1,6 @@
-import React from "react";
-import Carousel from "better-react-carousel";
-import { bannerCarouselImage } from "./bannerCarouselImages";
+import React from 'react';
+import Carousel from 'better-react-carousel';
+import {bannerCarouselImage} from './bannerCarouselImages';
 const Bannercarousel = () => {
   return (
     <Carousel
@@ -10,11 +10,10 @@ const Bannercarousel = () => {
       autoplay={2000}
       loop
       showDots
-      dotColorActive="black"
-    >
+      dotColorActive='black'>
       {bannerCarouselImage.map((image) => (
         <Carousel.Item>
-          <img height="20%" width="100%" src={image} alt="" />
+          <img height='20%' width='100%' src={image} alt='' />
         </Carousel.Item>
       ))}
     </Carousel>

@@ -1,7 +1,7 @@
-import "./spinner.css";
+import './spinner.css';
 const Spinner = () => (
-  <div className="spinner">
-    <div className="spinner__two" />
+  <div className='spinner'>
+    <div className='spinner__two' />
   </div>
 );
 

@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from 'react';
 
 const useAxios = (configObj) => {
-  const { axiosInstance, method, url, requestConfig = {} } = configObj;
+  const {axiosInstance, method, url, requestConfig = {}} = configObj;
 
   const [response, setResponse] = useState([]);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [loading, setLading] = useState(false);
 
   useEffect(() => {
