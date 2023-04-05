@@ -1,9 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import LargeNavbar from './largenavbar/largenavbar.jsx';
 import {useDispatch} from 'react-redux';
 import {fullProgress} from '../../redux/loaderSlice.js';
 import NewTooltip from '../tooltip/tooltip.jsx';
+import LargeNavbar from './largenavbar/largenavbar.jsx';
+import SmallNavbar from './smallnavbar/smallnavbar.jsx';
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const Navbar = () => {
         <NewTooltip title='Go Home'>Goava</NewTooltip>
       </Link>
       <LargeNavbar />
+      <SmallNavbar />
     </header>
   );
 };

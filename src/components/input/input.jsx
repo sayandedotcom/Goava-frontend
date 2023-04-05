@@ -13,7 +13,8 @@ const FormInput = ({
       <input
         className={`w-80 border-2 border-black py-1	pl-3 font-semibold ${className}`}
         {...register}
-        {...otherProps}>
+        {...otherProps}
+        autoComplete='on'>
         {children}
       </input>
       {errorMessage && (

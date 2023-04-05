@@ -36,6 +36,7 @@ const Signup = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  console.log(errors);
 
   const onSubmit = async ({name, email, password}) => {
     let result = await fetch('http://localhost:4000/api/v1/signup', {
@@ -45,14 +46,15 @@ const Signup = () => {
         'Content-Type': 'application/json',
       },
     });
-    console.log('1', result);
     result = await result.json();
-    // localStorage.setItem("token", JSON.stringify(result.token));
     console.log('2', result);
+    if (result.success === false) {
+      navigate('/login');
+    } else if (result.success) {
+      console.log(result);
+    }
     reset();
-    navigate('/');
   };
-  console.log(errors);
 
   return (
     <div className='mb-24 flex h-auto flex-col items-center justify-center gap-4'>

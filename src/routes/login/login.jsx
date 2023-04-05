@@ -31,6 +31,7 @@ const Login = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  console.log(errors);
 
   const onSubmit = async ({email, password}) => {
     let result = await fetch('http://localhost:4000/api/v1/login', {
@@ -42,14 +43,11 @@ const Login = () => {
     });
     console.log('1', result);
     result = await result.json();
-    // localStorage.setItem("token", JSON.stringify(result.token));
     console.log(result);
     console.log('2', result);
     reset();
     navigate('/');
   };
-
-  console.log(errors);
 
   return (
     <div className='mb-24 flex h-auto flex-col items-center justify-center gap-4'>

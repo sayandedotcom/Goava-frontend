@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import Button from '../../button/button';
@@ -13,19 +13,19 @@ const navbar = [
 ];
 const navbarIcons = [
   {
-    id: 1,
+    id: 4,
     tooltip: 'My Cart',
-    component: <ShoppingBagOutlinedIcon style={{fill: 'white'}} />,
+    component: <ShoppingCartOutlinedIcon style={{fill: 'white'}} />,
     route: '/cart',
   },
   {
-    id: 2,
+    id: 5,
     tooltip: 'My Favourites',
     component: <FavoriteBorderOutlinedIcon style={{fill: 'white'}} />,
     route: '/favourites',
   },
   {
-    id: 3,
+    id: 6,
     tooltip: 'Notifications',
     component: <NotificationsOutlinedIcon style={{fill: 'white'}} />,
     route: '/notifications',
@@ -34,14 +34,17 @@ const navbarIcons = [
 
 const LargeNavbar = () => {
   return (
-    <div className='max-w-5xl:hidden mr-3 flex items-center justify-between gap-6 '>
+    <nav className='mr-3 hidden items-center justify-between gap-6 md:flex'>
       {navbar.map(({id, component, route}) => (
-        <Link
-          key={id}
-          className='font-semibold text-black no-underline'
-          to={route}>
-          {component}
-        </Link>
+        <NewTooltip
+          title={component.charAt(0).toUpperCase() + component.slice(1)}>
+          <Link
+            key={id}
+            className='font-semibold text-black no-underline'
+            to={route}>
+            {component}
+          </Link>
+        </NewTooltip>
       ))}
       {navbarIcons.map(({id, tooltip, component, route}) => (
         <NewTooltip title={tooltip}>
@@ -63,7 +66,7 @@ const LargeNavbar = () => {
           <Button buttonType='inverted'>Sign Up</Button>
         </NewTooltip>
       </Link>
-    </div>
+    </nav>
   );
 };
 
