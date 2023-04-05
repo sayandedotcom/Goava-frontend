@@ -11,7 +11,8 @@
     "formulahendry.auto-rename-tag",
     "PKief.material-icon-theme",
     "2gua.rainbow-brackets",
-    "christian-kohler.path-intellisense"
+    "christian-kohler.path-intellisense",
+    "usernamehw.errorlens"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []
