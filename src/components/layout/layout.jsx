@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {fullProgress, initialProgress} from '../../redux/loaderSlice.js';
-import Navbar from '../navbar/navbar';
 import LoadingBar from 'react-top-loading-bar';
+import {ToastContainer} from 'react-toastify';
+import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
 
 const Layout = ({children}) => {
@@ -11,10 +12,22 @@ const Layout = ({children}) => {
 
   useEffect(() => {
     dispatch(fullProgress());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
+      <ToastContainer
+        position='top-center'
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme='dark'
+      />
       <LoadingBar
         color='#000000'
         height={6}

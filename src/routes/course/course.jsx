@@ -7,11 +7,11 @@ import Input from 'components/courseComponents/input/input';
 import Range from 'components/courseComponents/range/range';
 
 const Course = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fullProgress());
-  }, []);
-
-  const dispatch = useDispatch();
+  }, [dispatch]);
 
   return (
     <>

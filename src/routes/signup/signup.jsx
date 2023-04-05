@@ -7,6 +7,7 @@ import Button from 'components/button/button';
 import Google from 'assests/svg-google.svg';
 import FormInput from 'components/input/input';
 import NewTooltip from 'components/tooltip/tooltip';
+import {toastify} from 'components/toast/toast';
 
 const schema = yup
   .object({
@@ -15,7 +16,6 @@ const schema = yup
       .string()
       .required('Email is required')
       .matches(/\S+@\S+\.\S+/, 'Email is not valid'),
-    // .email("Email is not valid"),
     password: yup
       .string()
       .required('Password is required')
@@ -36,7 +36,6 @@ const Signup = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  console.log(errors);
 
   const onSubmit = async ({name, email, password}) => {
     let result = await fetch('http://localhost:4000/api/v1/signup', {
@@ -47,13 +46,13 @@ const Signup = () => {
       },
     });
     result = await result.json();
-    console.log('2', result);
-    if (result.success === false) {
+    if (result.success) {
+      toastify('Log In with your info...', 'success');
       navigate('/login');
-    } else if (result.success) {
-      console.log(result);
+      reset();
+    } else {
+      toastify('User already exists ! Try to Log In', 'error');
     }
-    reset();
   };
 
   return (
@@ -68,7 +67,6 @@ const Signup = () => {
       <div className='mt-5 flex w-80 flex-col gap-3 text-center font-semibold'>
         <p>Sign up with your Email and Password</p>
         <hr className='border-1 border-black' />
-
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4'>
           <FormInput
             placeholder='Full Name'

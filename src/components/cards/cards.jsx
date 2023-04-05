@@ -1,8 +1,9 @@
 import React from 'react';
-import {cardItems} from './cardsList';
-import Button from '../../components/button/button';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import {cardItems} from './cardsList';
+import Button from '../../components/button/button';
 
 const Cards = () => {
   return (
@@ -10,7 +11,7 @@ const Cards = () => {
       {cardItems.map(({id, image, tags, title, price}) => (
         <div className='w-80 rounded-xl bg-[#2c4152] p-3 font-semibold text-zinc-100'>
           <div>
-            <img className='rounded-xl' src={image} alt='' />
+            <LazyLoadImage className='rounded-xl' src={image} effect='blur' />
           </div>
           <div>
             <div className='flex gap-2 p-1'>

@@ -50,9 +50,12 @@ const LargeNavbar = () => {
         <NewTooltip title={tooltip}>
           <Link
             key={id}
-            className='flex rounded-[50%] bg-[black] p-2'
+            className='relative flex rounded-[50%] bg-[black] p-2'
             to={route}>
             {component}
+            <span className='absolute	top-[-5px] right-[-4px] flex h-5 w-5 items-center justify-center rounded-[50%] bg-red-600 text-xs font-light text-white'>
+              1
+            </span>
           </Link>
         </NewTooltip>
       ))}

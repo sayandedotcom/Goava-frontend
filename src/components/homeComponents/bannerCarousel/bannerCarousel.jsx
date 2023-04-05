@@ -1,4 +1,5 @@
 import React from 'react';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 import Carousel from 'better-react-carousel';
 import {bannerCarouselImage} from './bannerCarouselImages';
 const Bannercarousel = () => {
@@ -13,7 +14,7 @@ const Bannercarousel = () => {
       dotColorActive='black'>
       {bannerCarouselImage.map((image) => (
         <Carousel.Item>
-          <img height='20%' width='100%' src={image} alt='' />
+          <LazyLoadImage height='20%' width='100%' src={image} effect='blur' />
         </Carousel.Item>
       ))}
     </Carousel>

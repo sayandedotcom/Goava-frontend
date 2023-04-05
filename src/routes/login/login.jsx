@@ -7,6 +7,7 @@ import Button from 'components/button/button';
 import Google from 'assests/svg-google.svg';
 import FormInput from 'components/input/input';
 import NewTooltip from 'components/tooltip/tooltip';
+import {toastify} from 'components/toast/toast';
 
 const schema = yup
   .object({
@@ -31,7 +32,6 @@ const Login = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  console.log(errors);
 
   const onSubmit = async ({email, password}) => {
     let result = await fetch('http://localhost:4000/api/v1/login', {
@@ -41,12 +41,14 @@ const Login = () => {
         'Content-Type': 'application/json',
       },
     });
-    console.log('1', result);
     result = await result.json();
-    console.log(result);
-    console.log('2', result);
-    reset();
-    navigate('/');
+    if (result.success) {
+      toastify(result.message, 'success');
+      navigate('/');
+      reset();
+    } else {
+      toastify('Incorrect email or password.', 'error');
+    }
   };
 
   return (
