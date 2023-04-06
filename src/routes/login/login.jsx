@@ -36,12 +36,14 @@ const Login = () => {
   const onSubmit = async ({email, password}) => {
     let result = await fetch('http://localhost:4000/api/v1/login', {
       method: 'POST',
+      credentials: 'include',
       body: JSON.stringify({email, password}),
       headers: {
         'Content-Type': 'application/json',
       },
     });
     result = await result.json();
+    console.log(result);
     if (result.success) {
       toastify(result.message, 'success');
       navigate('/');
@@ -60,7 +62,7 @@ const Login = () => {
           <Button buttonType='inverted'>Sign Up</Button>
         </Link>
       </div>
-      <div className='mt-5 flex w-80 flex-col gap-3 text-center 	font-semibold'>
+      <div className='mt-5 flex w-80 flex-col gap-3 text-center font-semibold'>
         <p>Sign in with your Email and Password</p>
         <hr className='border-1 border-black' />
 

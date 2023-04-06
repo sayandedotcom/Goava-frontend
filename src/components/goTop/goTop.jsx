@@ -26,21 +26,23 @@ const GoTop = () => {
     });
   };
   return (
-    <div className=''>
+    <>
       {goToTop && (
-        <NewTooltip title='Scroll to top'>
-          <button
-            onClick={toTop}
-            className='fixed z-50 flex rounded-[50%] bg-black p-2'
-            aria-label='Click here to scroll to top'>
-            <KeyboardArrowUpIcon
-              className='z-10 text-white'
-              style={{fontSize: '2rem'}}
-            />
-          </button>
-        </NewTooltip>
+        <div className='z-40 bg-black'>
+          <NewTooltip title='Scroll to top'>
+            <button
+              onClick={toTop}
+              className='fixed z-50 flex rounded-[50%] bg-white p-2'
+              aria-label='Click here to scroll to top'>
+              <KeyboardArrowUpIcon
+                className='z-10 text-white'
+                style={{fontSize: '2rem'}}
+              />
+            </button>
+          </NewTooltip>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

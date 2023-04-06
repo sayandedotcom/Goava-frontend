@@ -11,7 +11,9 @@ const FormInput = ({
   return (
     <div>
       <input
-        className={`w-80 border-2 border-black py-1	pl-3 font-semibold ${className}`}
+        className={`w-80 border-2 border-black focus:outline-none ${
+          errorMessage && 'border-red-600'
+        } py-1	pl-3 font-semibold ${className}`}
         {...register}
         {...otherProps}
         autoComplete='on'>

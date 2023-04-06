@@ -10,7 +10,7 @@ const SmallNavbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <nav className='relative z-10 mr-3 flex cursor-pointer items-center justify-center md:hidden'>
+      <nav className='relative z-50 mr-3 flex cursor-pointer items-center justify-center md:hidden'>
         {!open ? (
           <MenuRoundedIcon
             onClick={() => setOpen(!open)}
@@ -24,11 +24,9 @@ const SmallNavbar = () => {
         )}
       </nav>
       <div
-        className={
-          open
-            ? 'absolute top-[96px]  flex w-full flex-col items-center justify-around gap-5 bg-white py-4 md:hidden'
-            : ' top-[-96px] hidden'
-        }>
+        className={`absolute ${
+          open ? 'top-[96px]' : 'top-[-96px] hidden'
+        }  flex w-full flex-col items-center justify-around gap-5 bg-slate-400 py-4 md:hidden`}>
         {navbarLists.map(
           ({id, tooltip, component, route}) =>
             id <= 3 && (
@@ -68,12 +66,12 @@ const SmallNavbar = () => {
           </Link>
         ) : (
           <>
-            <Link to='/login'>
+            <Link to='/login' onClick={() => setOpen(!open)}>
               <NewTooltip title='Log In'>
                 <Button buttonType='inverted'>Log In</Button>
               </NewTooltip>
             </Link>
-            <Link to='/signup'>
+            <Link to='/signup' onClick={() => setOpen(!open)}>
               <NewTooltip title='Sign Up'>
                 <Button buttonType='inverted'>Sign Up</Button>
               </NewTooltip>
