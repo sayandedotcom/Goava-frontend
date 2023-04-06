@@ -5,6 +5,7 @@ import LoadingBar from 'react-top-loading-bar';
 import {ToastContainer} from 'react-toastify';
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
+import GoTop from 'components/goTop/goTop.jsx';
 
 const Layout = ({children}) => {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ const Layout = ({children}) => {
       <Navbar />
       <div style={{marginTop: '100px', paddingTop: '0.6rem'}}>{children}</div>
       <Footer />
+      <GoTop />
     </>
   );
 };

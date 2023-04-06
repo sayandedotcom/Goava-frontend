@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 const Countup = ({start, end, duration, decimals, decimal, prefix, suffix}) => {
   return (
     <CountUp
-      className='text-5xl	font-black'
+      className='text-2xl font-black md:text-5xl'
       start={start}
       end={end}
       decimals={decimals}

@@ -11,17 +11,17 @@ const Navbar = () => {
 
   return (
     <header
-      className='nav fixed top-0 z-[101] flex h-[100px] w-full flex-row justify-between border-t-[3px]
+      className='nav fixed top-0 z-[101] flex h-[100px] w-full flex-row  border-t-[3px]
       border-b border-solid border-b-[#e0e0e0]
        bg-white uppercase no-underline shadow-[0_3px_6px_0_rgb(0_0_0_/_20%)] '>
+      <SmallNavbar />
       <Link
-        className='logo flex items-center justify-center px-8 py-0 text-[2rem] font-bold text-[black] no-underline'
+        className='flex items-center justify-center px-8 py-0 text-[2rem] font-bold text-[black] no-underline'
         to='/'
         onClick={() => dispatch(fullProgress())}>
         <NewTooltip title='Go Home'>Goava</NewTooltip>
       </Link>
       <LargeNavbar />
-      <SmallNavbar />
     </header>
   );
 };

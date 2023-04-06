@@ -14,7 +14,7 @@ const About = () => {
 
   useEffect(() => {
     dispatch(fullProgress());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className='my-3 flex flex-col items-center justify-center gap-6'>

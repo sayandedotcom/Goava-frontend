@@ -28,19 +28,17 @@ const GoTop = () => {
   return (
     <>
       {goToTop && (
-        <div className='z-40 bg-black'>
-          <NewTooltip title='Scroll to top'>
-            <button
-              onClick={toTop}
-              className='fixed z-50 flex rounded-[50%] bg-white p-2'
-              aria-label='Click here to scroll to top'>
-              <KeyboardArrowUpIcon
-                className='z-10 text-white'
-                style={{fontSize: '2rem'}}
-              />
-            </button>
-          </NewTooltip>
-        </div>
+        <NewTooltip title='Scroll to top'>
+          <button
+            onClick={toTop}
+            className='fixed right-4 top-[calc(100vh-6rem)] z-[1000] flex cursor-pointer items-center justify-center rounded-[50%] border-none bg-black p-2'
+            aria-label='Click here to scroll to top'>
+            <KeyboardArrowUpIcon
+              className='z-10 text-white'
+              style={{fontSize: '2rem'}}
+            />
+          </button>
+        </NewTooltip>
       )}
     </>
   );

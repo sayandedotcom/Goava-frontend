@@ -5,20 +5,20 @@ import Countup from '../../countup/countup';
 const Number = () => {
   return (
     <div>
-      <Heading id='#numbers'>Our Numbers</Heading>
-      <hr className='mt-5 border-4' />
+      <Heading>Our Numbers</Heading>
+      <hr className='mt-5 border-2' />
       <div className='mt-5 flex flex-wrap gap-5'>
         <div className='flex flex-col items-center justify-center border-2 p-7'>
           <Countup end={23000} duration={4} suffix=' +' />
-          <h1 className='text-xl font-black'>Students</h1>
+          <p className='text-sm font-black md:text-xl'>Students</p>
         </div>
         <div className='flex flex-col items-center justify-center border-2 p-7'>
           <Countup end={155} duration={4} suffix=' +' />
-          <h1 className='text-xl font-black'>Courses</h1>
+          <p className='text-sm font-black md:text-xl'>Courses</p>
         </div>
         <div className='flex flex-col items-center justify-center border-2 p-7'>
           <Countup end={10} duration={4} prefix='₹ ' suffix=' crore +' />
-          <h1 className='text-xl font-black'>Profits</h1>
+          <p className='text-sm font-black md:text-xl'>Profits</p>
         </div>
         <div className='flex flex-col items-center justify-center border-2 p-7'>
           <Countup
@@ -28,7 +28,7 @@ const Number = () => {
             duration={4}
             suffix=' +'
           />
-          <h1 className='text-xl font-black'>Rating</h1>
+          <p className='text-sm font-black md:text-xl'>Rating</p>
         </div>
       </div>
     </div>

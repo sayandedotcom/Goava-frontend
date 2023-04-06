@@ -10,7 +10,7 @@ const SmallNavbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <nav className='relative z-50 mr-3 flex cursor-pointer items-center justify-center md:hidden'>
+      <nav className='relative z-50 ml-3 flex cursor-pointer items-center justify-center md:hidden'>
         {!open ? (
           <MenuRoundedIcon
             onClick={() => setOpen(!open)}

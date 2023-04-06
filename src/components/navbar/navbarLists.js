@@ -9,19 +9,25 @@ export const navbarLists = [
   {
     id: 4,
     tooltip: 'My Cart',
-    component: <ShoppingCartOutlinedIcon style={{fill: 'white'}} />,
+    component: (
+      <ShoppingCartOutlinedIcon style={{fill: 'black', fontSize: '30px'}} />
+    ),
     route: '/cart',
   },
   {
     id: 5,
     tooltip: 'My Favourites',
-    component: <FavoriteBorderOutlinedIcon style={{fill: 'white'}} />,
+    component: (
+      <FavoriteBorderOutlinedIcon style={{fill: 'black', fontSize: '30px'}} />
+    ),
     route: '/favourites',
   },
   {
     id: 6,
     tooltip: 'Notifications',
-    component: <NotificationsOutlinedIcon style={{fill: 'white'}} />,
+    component: (
+      <NotificationsOutlinedIcon style={{fill: 'black', fontSize: '30px'}} />
+    ),
     route: '/notifications',
   },
 ];
