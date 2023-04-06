@@ -53,7 +53,7 @@ const Login = () => {
 
   return (
     <div className='mb-24 flex h-auto flex-col items-center justify-center gap-4'>
-      <p className='text-4xl font-black uppercase'>Sign in</p>
+      <p className='text-4xl font-black uppercase'>Log in</p>
       <div className='mt-3 flex flex-row items-center gap-4'>
         <p className='text-xl  font-bold'>Don't have an Account ?</p>
         <Link to={'/signup'}>

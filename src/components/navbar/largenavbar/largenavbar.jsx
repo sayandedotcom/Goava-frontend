@@ -1,74 +1,61 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import Button from '../../button/button';
 import NewTooltip from '../../tooltip/tooltip';
-
-const navbar = [
-  {id: 1, component: 'home', route: '/'},
-  {id: 2, component: 'about us', route: '/about'},
-  {id: 3, component: 'courses', route: '/courses'},
-];
-const navbarIcons = [
-  {
-    id: 4,
-    tooltip: 'My Cart',
-    component: <ShoppingCartOutlinedIcon style={{fill: 'white'}} />,
-    route: '/cart',
-  },
-  {
-    id: 5,
-    tooltip: 'My Favourites',
-    component: <FavoriteBorderOutlinedIcon style={{fill: 'white'}} />,
-    route: '/favourites',
-  },
-  {
-    id: 6,
-    tooltip: 'Notifications',
-    component: <NotificationsOutlinedIcon style={{fill: 'white'}} />,
-    route: '/notifications',
-  },
-];
+import {navbarLists} from 'components/navbar/navbarLists';
 
 const LargeNavbar = () => {
   return (
     <nav className='mr-3 hidden items-center justify-between gap-6 md:flex'>
-      {navbar.map(({id, component, route}) => (
-        <NewTooltip
-          title={component.charAt(0).toUpperCase() + component.slice(1)}>
-          <Link
-            key={id}
-            className='font-semibold text-black no-underline'
-            to={route}>
-            {component}
+      {navbarLists.map(
+        ({id, tooltip, component, route}) =>
+          id <= 3 && (
+            <NewTooltip title={tooltip}>
+              <Link
+                key={id}
+                className='font-semibold text-black no-underline'
+                to={route}>
+                {component}
+              </Link>
+            </NewTooltip>
+          )
+      )}
+      {navbarLists.map(
+        ({id, tooltip, component, route}) =>
+          id > 3 && (
+            <NewTooltip title={tooltip}>
+              <Link
+                key={id}
+                className='relative flex rounded-[50%] bg-[black] p-2'
+                to={route}>
+                {component}
+                <span className='absolute	top-[-5px] right-[-4px] flex h-5 w-5 items-center justify-center rounded-[50%] bg-red-600 text-xs font-light text-white'>
+                  1
+                </span>
+              </Link>
+            </NewTooltip>
+          )
+      )}
+      {document.cookies ? (
+        <Link to='/login'>
+          <NewTooltip title='Log Out'>
+            <Button buttonType='inverted'>Log Out</Button>
+          </NewTooltip>
+        </Link>
+      ) : (
+        <>
+          <Link to='/login'>
+            <NewTooltip title='Log In'>
+              <Button buttonType='inverted'>Log In</Button>
+            </NewTooltip>
           </Link>
-        </NewTooltip>
-      ))}
-      {navbarIcons.map(({id, tooltip, component, route}) => (
-        <NewTooltip title={tooltip}>
-          <Link
-            key={id}
-            className='relative flex rounded-[50%] bg-[black] p-2'
-            to={route}>
-            {component}
-            <span className='absolute	top-[-5px] right-[-4px] flex h-5 w-5 items-center justify-center rounded-[50%] bg-red-600 text-xs font-light text-white'>
-              1
-            </span>
+          <Link to='/signup'>
+            <NewTooltip title='Sign Up'>
+              <Button buttonType='inverted'>Sign Up</Button>
+            </NewTooltip>
           </Link>
-        </NewTooltip>
-      ))}
-      <Link to='/login'>
-        <NewTooltip title='Log In'>
-          <Button buttonType='inverted'>Log In</Button>
-        </NewTooltip>
-      </Link>
-      <Link to='/signup'>
-        <NewTooltip title='Sign Up'>
-          <Button buttonType='inverted'>Sign Up</Button>
-        </NewTooltip>
-      </Link>
+        </>
+      )}
     </nav>
   );
 };
