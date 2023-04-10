@@ -1,7 +1,4 @@
-import React from 'react';
 import {LazyLoadImage} from 'react-lazy-load-image-component';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {cardItems} from './cardsList';
 import Button from '../../components/button/button';
 
@@ -9,14 +6,18 @@ const Cards = () => {
   return (
     <>
       {cardItems.map(({id, image, tags, title, price}) => (
-        <div className='w-80 rounded-xl bg-[#2c4152] p-3 font-semibold text-zinc-100'>
+        <div
+          key={id}
+          className='w-80 rounded-xl bg-[#2c4152] p-3 font-semibold text-zinc-100'>
           <div>
             <LazyLoadImage className='rounded-xl' src={image} effect='blur' />
           </div>
           <div>
             <div className='flex gap-2 p-1'>
-              {tags.map((tag) => (
-                <span className='cursor-pointer rounded-lg bg-slate-800 p-1 text-sm'>
+              {tags.map((tag, i) => (
+                <span
+                  key={i}
+                  className='cursor-pointer rounded-lg bg-slate-800 p-1 text-sm'>
                   {tag}
                 </span>
               ))}

@@ -12,8 +12,8 @@ const Bannercarousel = () => {
       loop
       showDots
       dotColorActive='black'>
-      {bannerCarouselImage.map((image) => (
-        <Carousel.Item>
+      {bannerCarouselImage.map((image, i) => (
+        <Carousel.Item key={i}>
           <LazyLoadImage height='20%' width='100%' src={image} effect='blur' />
         </Carousel.Item>
       ))}

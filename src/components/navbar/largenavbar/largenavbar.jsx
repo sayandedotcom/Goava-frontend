@@ -10,9 +10,8 @@ const LargeNavbar = () => {
       {navbarLists.map(
         ({id, tooltip, component, route}) =>
           id <= 3 && (
-            <NewTooltip title={tooltip}>
+            <NewTooltip key={id} title={tooltip}>
               <Link
-                key={id}
                 className='font-semibold text-black no-underline focus:border-b-2 focus:border-black'
                 to={route}>
                 {component}
@@ -23,9 +22,8 @@ const LargeNavbar = () => {
       {navbarLists.map(
         ({id, tooltip, component, route}) =>
           id > 3 && (
-            <NewTooltip title={tooltip}>
+            <NewTooltip key={id} title={tooltip}>
               <Link
-                key={id}
                 className='relative flex rounded-[50%] p-2 focus:bg-slate-300'
                 to={route}>
                 {component}

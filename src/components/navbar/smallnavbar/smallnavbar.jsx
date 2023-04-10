@@ -30,9 +30,8 @@ const SmallNavbar = () => {
         {navbarLists.map(
           ({id, tooltip, component, route}) =>
             id <= 3 && (
-              <NewTooltip title={tooltip}>
+              <NewTooltip key={id} title={tooltip}>
                 <Link
-                  key={id}
                   onClick={() => setOpen(!open)}
                   className='font-semibold text-black no-underline'
                   to={route}>
@@ -44,9 +43,8 @@ const SmallNavbar = () => {
         {navbarLists.map(
           ({id, tooltip, component, route}) =>
             id > 3 && (
-              <NewTooltip title={tooltip}>
+              <NewTooltip key={id} title={tooltip}>
                 <Link
-                  key={id}
                   onClick={() => setOpen(!open)}
                   className='relative flex rounded-[50%] bg-[black] p-2'
                   to={route}>

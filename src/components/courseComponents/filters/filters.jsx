@@ -34,8 +34,9 @@ const Filters = () => {
       </div>
       <hr className='w-full border-t-black' />
       <div className='my-3 w-full'>
-        {filters.map((filter) => (
+        {filters.map((filter, i) => (
           <Radio
+            key={i}
             value={filter}
             onChange={handleChange}
             checked={activeFilter.includes(filter) && 'true'}

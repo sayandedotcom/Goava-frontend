@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <header
-      className='nav fixed top-0 z-[101] flex h-[100px] w-full flex-row  border-t-[3px]
+      className='fixed top-0 z-[101] flex h-[100px] w-full flex-row  border-t-[3px]
       border-b border-solid border-b-[#e0e0e0]
        bg-white uppercase no-underline shadow-[0_3px_6px_0_rgb(0_0_0_/_20%)] '>
       <SmallNavbar />

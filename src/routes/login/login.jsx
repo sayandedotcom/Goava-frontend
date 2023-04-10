@@ -64,7 +64,7 @@ const Login = () => {
       </div>
       <div className='mt-5 flex w-80 flex-col gap-3 text-center font-semibold'>
         <p>Sign in with your Email and Password</p>
-        <hr className='border-1 border-black' />
+        <hr className='border border-black' />
 
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4'>
           <FormInput
