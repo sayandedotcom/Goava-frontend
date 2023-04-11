@@ -20,20 +20,20 @@ const ErrorPage = lazy(() => import('pages/ErrorPage'));
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<RenderPage page={HomePage} />} />
-      <Route path='/courses' element={<RenderPage page={CoursePage} />} />
-      <Route path='/about' element={<RenderPage page={AboutPage} />} />
-      <Route path='/cart' element={<RenderPage page={Cart} />} />
-      <Route path='/checkout' element={<RenderPage page={Checkout} />} />
-      <Route path='/favourites' element={<RenderPage page={Favourites} />} />
+      <Route path='/' element={<RenderPage Page={HomePage} />} />
+      <Route path='/courses' element={<RenderPage Page={CoursePage} />} />
+      <Route path='/about' element={<RenderPage Page={AboutPage} />} />
+      <Route path='/cart' element={<RenderPage Page={Cart} />} />
+      <Route path='/checkout' element={<RenderPage Page={Checkout} />} />
+      <Route path='/favourites' element={<RenderPage Page={Favourites} />} />
       <Route
         path='/notifications'
-        element={<RenderPage page={Notifications} />}
+        element={<RenderPage Page={Notifications} />}
       />
-      <Route path='/login' element={<RenderPage page={Login} />} />
-      <Route path='/signup' element={<RenderPage page={Signup} />} />
-      <Route path='/admin' element={<RenderPage page={Admin} />} />
-      <Route path='*' element={<RenderPage page={ErrorPage} />} />
+      <Route path='/login' element={<RenderPage Page={Login} />} />
+      <Route path='/signup' element={<RenderPage Page={Signup} />} />
+      <Route path='/admin' element={<RenderPage Page={Admin} />} />
+      <Route path='*' element={<RenderPage Page={ErrorPage} />} />
     </Routes>
   );
 }
