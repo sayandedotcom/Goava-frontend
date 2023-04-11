@@ -1,7 +1,7 @@
 import React, {lazy, Suspense} from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Spinner from 'components/spinner/spinner';
-import Layout from 'components/layout/layout';
+import Layout from 'layout/layout';
 const HomePage = lazy(() => import('routes/home/home'));
 const CoursePage = lazy(() => import('routes/course/course'));
 const AboutPage = lazy(() => import('routes/about/about'));

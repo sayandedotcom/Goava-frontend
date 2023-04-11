@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {fullProgress, initialProgress} from '../../redux/loaderSlice.js';
+import {fullProgress, initialProgress} from '../store/loaderSlice.js';
 import LoadingBar from 'react-top-loading-bar';
 import {ToastContainer} from 'react-toastify';
-import Navbar from '../navbar/navbar';
-import Footer from '../footer/footer';
+import Navbar from '../components/navbar/navbar.jsx';
+import Footer from '../components/footer/footer.jsx';
 import GoTop from 'components/goTop/goTop.jsx';
 
 const Layout = ({children}) => {

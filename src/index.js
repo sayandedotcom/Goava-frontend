@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import App from 'App';
-import {store} from 'redux/store';
+import {store} from 'store/store';
 import reportWebVitals from 'reportWebVitals';
 import 'react-tippy/dist/tippy.css';
 import 'react-lazy-load-image-component/src/effects/blur.css';
