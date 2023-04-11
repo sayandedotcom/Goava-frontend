@@ -6,11 +6,12 @@ import * as yup from 'yup';
 import Button from 'components/button/button';
 import Google from 'assests/svg-google.svg';
 import FormInput from 'components/input/input';
-import NewTooltip from 'components/tooltip/tooltip';
-import {toastify} from 'components/toast/toast';
+import NewTooltip from 'lib/tooltip';
+import {toastify} from 'lib/toast';
 
 const schema = yup
   .object({
+    name: yup.string().required('Full Name is required'),
     email: yup
       .string()
       .required('Email is required')
@@ -19,10 +20,13 @@ const schema = yup
       .string()
       .required('Password is required')
       .min(6, 'Password must be less than 6 character'),
+    confirmPassword: yup
+      .string()
+      .oneOf([yup.ref('password')], 'Pasword does not match'),
   })
   .required();
 
-const Login = () => {
+const Signup = () => {
   const navigate = useNavigate();
   const {
     register,
@@ -33,40 +37,44 @@ const Login = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async ({email, password}) => {
-    let result = await fetch('http://localhost:4000/api/v1/login', {
+  const onSubmit = async ({name, email, password}) => {
+    let result = await fetch('http://localhost:4000/api/v1/signup', {
       method: 'POST',
-      credentials: 'include',
-      body: JSON.stringify({email, password}),
+      body: JSON.stringify({name, email, password}),
       headers: {
         'Content-Type': 'application/json',
       },
     });
     result = await result.json();
-    console.log(result);
     if (result.success) {
-      toastify(result.message, 'success');
-      navigate('/');
+      toastify('Log In with your info...', 'success');
+      navigate('/login');
       reset();
     } else {
-      toastify('Incorrect email or password.', 'error');
+      toastify('User already exists ! Try to Log In', 'error');
     }
   };
 
   return (
     <div className='mb-24 flex h-auto flex-col items-center justify-center gap-4'>
-      <p className='text-4xl font-black uppercase'>Log in</p>
+      <p className='text-4xl font-black uppercase'>Sign up</p>
       <div className='mt-3 flex flex-row items-center gap-4'>
-        <p className='text-xl  font-bold'>Don't have an Account ?</p>
-        <Link to={'/signup'}>
-          <Button buttonType='inverted'>Sign Up</Button>
+        <p className='text-xl  font-bold'>Already have an Account ?</p>
+        <Link to={'/login'}>
+          <Button buttonType='inverted'>Log In</Button>
         </Link>
       </div>
       <div className='mt-5 flex w-80 flex-col gap-3 text-center font-semibold'>
-        <p>Sign in with your Email and Password</p>
+        <p>Sign up with your Email and Password</p>
         <hr className='border border-black' />
-
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4'>
+          <FormInput
+            placeholder='Full Name'
+            type='text'
+            name='name'
+            register={{...register('name')}}
+            errorMessage={errors.name?.message}
+          />
           <FormInput
             placeholder='Email Address'
             type='text'
@@ -81,14 +89,21 @@ const Login = () => {
             register={{...register('password')}}
             errorMessage={errors.password?.message}
           />
+          <FormInput
+            placeholder='Confirm Password'
+            type='password'
+            name='confirmPassword'
+            register={{...register('confirmPassword')}}
+            errorMessage={errors.confirmPassword?.message}
+          />
           <Button buttonType='inverted' type='submit'>
-            Log In
+            Sign Up
           </Button>
         </form>
       </div>
       <h1 className='text-2xl font-bold'>OR</h1>
       <div className='flex items-center justify-center gap-4'>
-        <NewTooltip title='Sign In with Google'>
+        <NewTooltip title='Sign Up with Google'>
           <Button buttonType='google'>
             <img src={Google} alt='' />
             Google
@@ -99,4 +114,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
