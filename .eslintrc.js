@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
     jest: true,
+    node: true,
   },
   extends: [
     'eslint:recommended',
@@ -16,6 +17,11 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', 'simple-import-sort', 'unused-imports'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     'react/prop-types': 'off',
     'no-unused-vars': 'off',
