@@ -1,6 +1,6 @@
 import React from 'react';
 import Heading from '../headings/headings';
-import Button from '../../button/button';
+import Button from '../../button';
 
 const Testimonials = () => {
   return (

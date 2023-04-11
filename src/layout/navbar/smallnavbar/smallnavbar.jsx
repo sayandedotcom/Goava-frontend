@@ -4,7 +4,7 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import {navbarLists} from 'layout/navbar/navbarLists';
 import NewTooltip from 'lib/tooltip';
-import Button from 'components/button/button';
+import Button from 'components/button';
 
 const SmallNavbar = () => {
   const [open, setOpen] = useState(false);

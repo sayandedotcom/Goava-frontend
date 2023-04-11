@@ -1,8 +1,8 @@
 import React from 'react';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
-import FormInput from '../../input/input';
+import FormInput from '../../formInput';
 import NewTooltip from '../../../lib/tooltip';
-import Button from '../../button/button';
+import Button from '../../button';
 const Input = () => {
   return (
     <form

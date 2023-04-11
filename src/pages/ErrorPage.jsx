@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
-import Button from 'components/button/button';
+import Button from 'components/button';
 
 const Error = () => {
   const navigate = useNavigate();

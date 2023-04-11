@@ -1,6 +1,6 @@
 import {LazyLoadImage} from 'react-lazy-load-image-component';
 import {cardItems} from './cardsList';
-import Button from '../../components/button/button';
+import Button from '../button';
 
 const Cards = () => {
   return (

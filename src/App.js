@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from 'react';
 import {Routes, Route} from 'react-router-dom';
-import Spinner from 'components/spinner/spinner';
+import Spinner from 'components/spinner';
 import Layout from 'layout';
 import 'styles/tailwind.css';
 import 'react-tippy/dist/tippy.css';

@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 import {fullProgress} from 'store/loaderSlice';
-import Button from 'components/button/button';
+import Button from 'components/button';
 import Number from 'components/aboutComponents/numbers/numbers';
 import Socials from 'components/aboutComponents/socials/socials';
 import Testimonials from 'components/aboutComponents/testimonials/testimonials';

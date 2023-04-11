@@ -3,9 +3,9 @@ import {Link, useNavigate} from 'react-router-dom';
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import Button from 'components/button/button';
+import Button from 'components/button';
 import Google from 'assests/svg-google.svg';
-import FormInput from 'components/input/input';
+import FormInput from 'components/formInput';
 import NewTooltip from 'lib/tooltip';
 import {toastify} from 'lib/toast';
 
