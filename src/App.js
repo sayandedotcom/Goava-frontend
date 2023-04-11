@@ -1,7 +1,6 @@
 import React, {lazy, Suspense} from 'react';
 import {Routes, Route} from 'react-router-dom';
-import Spinner from 'components/spinner';
-import Layout from 'layout';
+import RenderPage from 'utils/RenderPage';
 import 'styles/tailwind.css';
 import 'react-tippy/dist/tippy.css';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -21,116 +20,20 @@ const ErrorPage = lazy(() => import('pages/ErrorPage'));
 function App() {
   return (
     <Routes>
-      <Route
-        path='/'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <HomePage />
-            </Suspense>
-          </Layout>
-        }
-      />
-      <Route
-        path='/courses'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <CoursePage />
-            </Suspense>
-          </Layout>
-        }
-      />
-      <Route
-        path='/about'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <AboutPage />
-            </Suspense>
-          </Layout>
-        }
-      />
-      <Route
-        path='/cart'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <Cart />
-            </Suspense>
-          </Layout>
-        }
-      />
-      <Route
-        path='/checkout'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <Checkout />
-            </Suspense>
-          </Layout>
-        }
-      />
-      <Route
-        path='/favourites'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <Favourites />
-            </Suspense>
-          </Layout>
-        }
-      />
+      <Route path='/' element={<RenderPage page={HomePage} />} />
+      <Route path='/courses' element={<RenderPage page={CoursePage} />} />
+      <Route path='/about' element={<RenderPage page={AboutPage} />} />
+      <Route path='/cart' element={<RenderPage page={Cart} />} />
+      <Route path='/checkout' element={<RenderPage page={Checkout} />} />
+      <Route path='/favourites' element={<RenderPage page={Favourites} />} />
       <Route
         path='/notifications'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <Notifications />
-            </Suspense>
-          </Layout>
-        }
+        element={<RenderPage page={Notifications} />}
       />
-      <Route
-        path='/login'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <Login />
-            </Suspense>
-          </Layout>
-        }
-      />
-      <Route
-        path='/signup'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <Signup />
-            </Suspense>
-          </Layout>
-        }
-      />
-      <Route
-        path='/admin'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <Admin />
-            </Suspense>
-          </Layout>
-        }
-      />
-      <Route
-        path='*'
-        element={
-          <Layout>
-            <Suspense fallback={<Spinner />}>
-              <ErrorPage />
-            </Suspense>
-          </Layout>
-        }
-      />
+      <Route path='/login' element={<RenderPage page={Login} />} />
+      <Route path='/signup' element={<RenderPage page={Signup} />} />
+      <Route path='/admin' element={<RenderPage page={Admin} />} />
+      <Route path='*' element={<RenderPage page={ErrorPage} />} />
     </Routes>
   );
 }
