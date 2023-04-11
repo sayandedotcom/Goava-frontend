@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import {navbarLists} from 'components/navbar/navbarLists';
-import NewTooltip from 'components/tooltip/tooltip';
+import {navbarLists} from 'layout/navbar/navbarLists';
+import NewTooltip from 'lib/tooltip';
 import Button from 'components/button/button';
 
 const SmallNavbar = () => {

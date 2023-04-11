@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 import {fullProgress} from '../../store/loaderSlice.js';
-import NewTooltip from '../tooltip/tooltip.jsx';
+import NewTooltip from '../../lib/tooltip.jsx';
 import LargeNavbar from './largenavbar/largenavbar.jsx';
 import SmallNavbar from './smallnavbar/smallnavbar.jsx';
 

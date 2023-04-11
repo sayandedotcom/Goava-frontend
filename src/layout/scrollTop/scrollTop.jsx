@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import NewTooltip from '../tooltip/tooltip';
+import NewTooltip from '../../lib/tooltip';
 
-const GoTop = () => {
+const ScrollTop = () => {
   const [goToTop, setgoToTop] = useState(false);
   const showBtn = () => {
     if (window.scrollY > 200) {
@@ -44,4 +44,4 @@ const GoTop = () => {
   );
 };
 
-export default GoTop;
+export default ScrollTop;

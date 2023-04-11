@@ -5,10 +5,6 @@ import {Provider} from 'react-redux';
 import App from 'App';
 import {store} from 'store/store';
 import reportWebVitals from 'reportWebVitals';
-import 'react-tippy/dist/tippy.css';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import 'react-toastify/dist/ReactToastify.css';
-import 'index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

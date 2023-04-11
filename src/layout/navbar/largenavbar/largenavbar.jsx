@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Button from '../../button/button';
-import NewTooltip from '../../tooltip/tooltip';
-import {navbarLists} from 'components/navbar/navbarLists';
+import Button from '../../../components/button/button';
+import NewTooltip from '../../../lib/tooltip';
+import {navbarLists} from 'layout/navbar/navbarLists';
 
 const LargeNavbar = () => {
   return (

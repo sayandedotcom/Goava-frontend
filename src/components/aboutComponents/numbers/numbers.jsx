@@ -1,6 +1,6 @@
 import React from 'react';
 import Heading from '../headings/headings';
-import Countup from '../../countup/countup';
+import Countup from '../../../lib/countup';
 
 const Number = () => {
   return (

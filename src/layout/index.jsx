@@ -3,9 +3,9 @@ import {useDispatch, useSelector} from 'react-redux';
 import {fullProgress, initialProgress} from '../store/loaderSlice.js';
 import LoadingBar from 'react-top-loading-bar';
 import {ToastContainer} from 'react-toastify';
-import Navbar from '../components/navbar/navbar.jsx';
-import Footer from '../components/footer/footer.jsx';
-import GoTop from 'components/goTop/goTop.jsx';
+import Navbar from 'layout/navbar/index.jsx';
+import Footer from 'layout/footer/index.jsx';
+import ScrollTop from 'layout/scrollTop/scrollTop.jsx';
 
 const Layout = ({children}) => {
   const dispatch = useDispatch();
@@ -39,7 +39,7 @@ const Layout = ({children}) => {
       <Navbar />
       <div style={{marginTop: '100px', paddingTop: '0.6rem'}}>{children}</div>
       <Footer />
-      <GoTop />
+      <ScrollTop />
     </>
   );
 };

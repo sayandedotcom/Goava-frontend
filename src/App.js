@@ -1,8 +1,11 @@
 import React, {lazy, Suspense} from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Spinner from 'components/spinner/spinner';
-import Layout from 'layout/layout';
+import Layout from 'layout';
 import 'styles/tailwind.css';
+import 'react-tippy/dist/tippy.css';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import 'react-toastify/dist/ReactToastify.css';
 const HomePage = lazy(() => import('pages/HomePage'));
 const CoursePage = lazy(() => import('pages/CoursePage'));
 const AboutPage = lazy(() => import('pages/AboutPage'));
