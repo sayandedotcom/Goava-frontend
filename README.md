@@ -48,10 +48,10 @@ From your command line, first clone this repo:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/sayande2002/My-Portfolio-Website-ReactJs.git
+$ git clone https://github.com/sayande2002/Goava-frontend.git
 
 # Go into the repository
-$ cd My-Portfolio-Website-ReactJs
+$ cd Goava-frontend
 
 # Remove current origin repository
 $ git remote remove origin
