@@ -37,8 +37,8 @@ const SmallNavbar = () => {
                   className='font-semibold text-black no-underline'
                   to={route}>
                   {component}
+                  <span>{name}</span>
                 </Link>
-                <span>{name}</span>
               </NewTooltip>
             )
         )}
@@ -46,16 +46,16 @@ const SmallNavbar = () => {
           ({id, name, component, route}) =>
             id > 3 && (
               <NewTooltip key={id} title={name}>
-                <Link
-                  onClick={() => setOpen(!open)}
-                  className='relative inline  p-2'
-                  to={route}>
-                  {component}
-                  <span className='absolute	top-[-5px] right-[-4px] flex h-5 w-5 items-center justify-center rounded-[50%] bg-red-600 text-xs font-light text-white'>
-                    <Countup end={15} duration={4} />
+                <Link onClick={() => setOpen(!open)} to={route}>
+                  <span className='relative'>
+                    {component}
+                    <span className='absolute	top-[-13px] right-[-4px] flex h-5 w-5 items-center justify-center rounded-[50%] bg-red-600 text-xs font-light text-white'>
+                      <Countup end={15} duration={4} />
+                    </span>
                   </span>
+
+                  <span>{name}</span>
                 </Link>
-                <span>{name}</span>
               </NewTooltip>
             )
         )}
