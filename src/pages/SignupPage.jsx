@@ -7,7 +7,7 @@ import Google from 'assests/svg-google.svg';
 import FormInput from 'components/formInput';
 import NewTooltip from 'lib/tooltip';
 import {toastify} from 'lib/toast';
-import {schema} from 'lib/yup';
+import {signUpSchema} from 'lib/yup';
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Signup = () => {
     reset,
     formState: {errors},
   } = useForm({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(signUpSchema),
   });
 
   const onSubmit = async ({name, email, password}) => {
