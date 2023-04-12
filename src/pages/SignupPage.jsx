@@ -2,7 +2,6 @@ import React from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
-import * as yup from 'yup';
 import Button from 'components/button';
 import Google from 'assests/svg-google.svg';
 import FormInput from 'components/formInput';
