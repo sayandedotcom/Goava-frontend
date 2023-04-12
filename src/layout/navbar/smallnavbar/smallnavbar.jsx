@@ -11,7 +11,7 @@ const SmallNavbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <nav className='relative z-50 ml-3 flex cursor-pointer items-center justify-center md:hidden'>
+      <nav className='relative z-10 ml-3 flex cursor-pointer items-center justify-center md:hidden'>
         {!open ? (
           <MenuRoundedIcon
             onClick={() => setOpen(!open)}
@@ -26,15 +26,15 @@ const SmallNavbar = () => {
       </nav>
       <div
         className={`absolute ${
-          open ? 'top-[98px]' : 'top-[-100px] hidden'
-        }  flex w-full flex-col items-center justify-between bg-slate-400 md:hidden`}>
+          open ? 'top-[98px]' : 'top-[-320px]'
+        }  -z-50 flex w-full flex-col items-center justify-between bg-white md:hidden`}>
         {navbarLists.map(
           ({id, name, component, route}) =>
             id <= 3 && (
               <Link
                 key={id}
                 onClick={() => setOpen(!open)}
-                className='flex w-full items-center justify-center gap-2 py-2 font-semibold text-black no-underline hover:bg-slate-500'
+                className='-z-10 flex w-full items-center justify-center gap-2 py-3 font-semibold text-black no-underline hover:bg-slate-200'
                 to={route}>
                 {component}
                 <span>{name}</span>
@@ -48,7 +48,7 @@ const SmallNavbar = () => {
                 key={id}
                 onClick={() => setOpen(!open)}
                 to={route}
-                className='flex w-full items-center justify-center gap-2 py-2 font-semibold text-black no-underline hover:bg-slate-500'>
+                className='-z-10 flex w-full items-center justify-center gap-2 py-3 font-semibold text-black no-underline hover:bg-slate-200'>
                 <span className='relative'>
                   {component}
                   <span className='absolute	top-[-13px] right-[-4px] flex h-5 w-5 items-center justify-center rounded-[50%] bg-red-600 text-xs font-light text-white'>
