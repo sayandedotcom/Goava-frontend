@@ -6,6 +6,7 @@ import {ToastContainer} from 'react-toastify';
 import Navbar from 'layout/navbar/index.jsx';
 import Footer from 'layout/footer/index.jsx';
 import ScrollTop from 'layout/scrollTop/scrollTop.jsx';
+import Demonav from 'layout/demonav/Demonav.jsx';
 
 const Layout = ({children}) => {
   const dispatch = useDispatch();
@@ -37,7 +38,8 @@ const Layout = ({children}) => {
         onLoaderFinished={() => dispatch(initialProgress())}
       />
       <Navbar />
-      <div style={{marginTop: '100px', paddingTop: '0.6rem'}}>{children}</div>
+      {/* <Demonav /> */}
+      <div style={{marginTop: '100px', paddingTop: '0.2rem'}}>{children}</div>
       <Footer />
       <ScrollTop />
     </>

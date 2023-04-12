@@ -7,7 +7,7 @@ const Input = () => {
   return (
     <form
       action=''
-      className='fixed inset-x-0 top-[100px] z-50 flex items-center justify-center gap-3 bg-[#ffffff] p-4'>
+      className=' inset-x-0 top-[100px] z-50 flex items-center justify-center gap-3 bg-[#ffffff] p-4'>
       <FormInput
         className='w-96 rounded-xl py-2'
         type='text'

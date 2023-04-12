@@ -1,10 +1,19 @@
 import React from 'react';
 import CountUp from 'react-countup';
 
-const Countup = ({start, end, duration, decimals, decimal, prefix, suffix}) => {
+const Countup = ({
+  start,
+  end,
+  duration,
+  decimals,
+  decimal,
+  prefix,
+  suffix,
+  className,
+}) => {
   return (
     <CountUp
-      className='text-2xl font-black md:text-5xl'
+      className={className}
       start={start}
       end={end}
       decimals={decimals}

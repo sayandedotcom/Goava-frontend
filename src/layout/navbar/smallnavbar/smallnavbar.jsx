@@ -5,6 +5,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import {navbarLists} from 'layout/navbar/navbarLists';
 import NewTooltip from 'lib/tooltip';
 import Button from 'components/button';
+import Countup from 'lib/countup';
 
 const SmallNavbar = () => {
   const [open, setOpen] = useState(false);
@@ -28,53 +29,35 @@ const SmallNavbar = () => {
           open ? 'top-[96px]' : 'top-[-96px] hidden'
         }  flex w-full flex-col items-center justify-around gap-5 bg-slate-400 py-4 md:hidden`}>
         {navbarLists.map(
-          ({id, tooltip, component, route}) =>
+          ({id, name, component, route}) =>
             id <= 3 && (
-              <NewTooltip key={id} title={tooltip}>
+              <NewTooltip key={id} title={name}>
                 <Link
                   onClick={() => setOpen(!open)}
                   className='font-semibold text-black no-underline'
                   to={route}>
                   {component}
                 </Link>
+                <span>{name}</span>
               </NewTooltip>
             )
         )}
         {navbarLists.map(
-          ({id, tooltip, component, route}) =>
+          ({id, name, component, route}) =>
             id > 3 && (
-              <NewTooltip key={id} title={tooltip}>
+              <NewTooltip key={id} title={name}>
                 <Link
                   onClick={() => setOpen(!open)}
-                  className='relative flex rounded-[50%] bg-[black] p-2'
+                  className='relative inline  p-2'
                   to={route}>
                   {component}
                   <span className='absolute	top-[-5px] right-[-4px] flex h-5 w-5 items-center justify-center rounded-[50%] bg-red-600 text-xs font-light text-white'>
-                    1
+                    <Countup end={15} duration={4} />
                   </span>
                 </Link>
+                <span>{name}</span>
               </NewTooltip>
             )
-        )}
-        {document.cookies ? (
-          <Link to='/login'>
-            <NewTooltip title='Log Out'>
-              <Button buttonType='inverted'>Log Out</Button>
-            </NewTooltip>
-          </Link>
-        ) : (
-          <>
-            <Link to='/login' onClick={() => setOpen(!open)}>
-              <NewTooltip title='Log In'>
-                <Button buttonType='inverted'>Log In</Button>
-              </NewTooltip>
-            </Link>
-            <Link to='/signup' onClick={() => setOpen(!open)}>
-              <NewTooltip title='Sign Up'>
-                <Button buttonType='inverted'>Sign Up</Button>
-              </NewTooltip>
-            </Link>
-          </>
         )}
       </div>
     </>
